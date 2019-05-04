@@ -15,18 +15,19 @@
 }
 
 
+// Apply the widths defined below, or default to full width
 [class*="colspan-"] {
     grid-column: span var(--width, #{$grid-columns});
 }
 
-// Column widths at any breakpoint (colspan-#)
+// Column widths at any breakpoint (colspan-*)
 @for $i from 1 through $grid-columns {
     .colspan-#{$i} {
         --width: #{$i};
     }
 }
 
-// Column widths above the small breakpoint (colspan-m-#)
+// Column widths above the small breakpoint (colspan-m-*)
 @media (min-width: $breakpoint-small) {
     @for $i from 1 through $grid-columns {
         .colspan-m-#{$i} {
@@ -35,7 +36,7 @@
     }
 }
 
-// Column widths above the medium breakpoint (colspan-l-#)
+// Column widths above the medium breakpoint (colspan-l-*)
 @media (min-width: $breakpoint-medium) {
     @for $i from 1 through $grid-columns {
         .colspan-l-#{$i} {
@@ -44,7 +45,7 @@
     }
 }
 
-// Column widths above the medium breakpoint (colspan-xl-#)
+// Column widths above the medium breakpoint (colspan-xl-*)
 @media (min-width: $breakpoint-large) {
     @for $i from 1 through $grid-columns {
         .colspan-xl-#{$i} {

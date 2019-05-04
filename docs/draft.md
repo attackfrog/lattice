@@ -28,6 +28,8 @@ You can also give elements different widths for different screen sizes.
 
 Values for larger screen sizes will overwrite ones for smaller sizes, so if you do `<div class="colspan-6 colspan-l-3">`, the div will be 6 wide below the large breakpoint and 3 wide above it.
 
+If you just provide a width at larger screen sizes, the element will be full width by default at smaller screen sizes.
+
 ### Customization
 
 If you want a different number of columns than 6, add the variable `$grid-columns` to `_variables_custom.scss` with your desired value. 
