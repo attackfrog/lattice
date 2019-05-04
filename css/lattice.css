@@ -1,3 +1,121 @@
-p {
-  color: green;
+.gridbox, .gridbox-gapless {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem 1rem;
+  gap: 1rem 1rem;
+}
+
+.gridbox-gapless {
+  grid-gap: 0 0;
+  gap: 0 0;
+}
+
+[class*=colspan-] {
+  grid-column: span var(--width, 6);
+}
+
+.colspan-1 {
+  --width: 1;
+}
+
+.colspan-2 {
+  --width: 2;
+}
+
+.colspan-3 {
+  --width: 3;
+}
+
+.colspan-4 {
+  --width: 4;
+}
+
+.colspan-5 {
+  --width: 5;
+}
+
+.colspan-6 {
+  --width: 6;
+}
+
+@media (min-width: 640px) {
+  .colspan-m-1 {
+    --width: 1;
+  }
+
+  .colspan-m-2 {
+    --width: 2;
+  }
+
+  .colspan-m-3 {
+    --width: 3;
+  }
+
+  .colspan-m-4 {
+    --width: 4;
+  }
+
+  .colspan-m-5 {
+    --width: 5;
+  }
+
+  .colspan-m-6 {
+    --width: 6;
+  }
+}
+@media (min-width: 960px) {
+  .colspan-l-1 {
+    --width: 1;
+  }
+
+  .colspan-l-2 {
+    --width: 2;
+  }
+
+  .colspan-l-3 {
+    --width: 3;
+  }
+
+  .colspan-l-4 {
+    --width: 4;
+  }
+
+  .colspan-l-5 {
+    --width: 5;
+  }
+
+  .colspan-l-6 {
+    --width: 6;
+  }
+}
+@media (min-width: 1200px) {
+  .colspan-xl-1 {
+    --width: 1;
+  }
+
+  .colspan-xl-2 {
+    --width: 2;
+  }
+
+  .colspan-xl-3 {
+    --width: 3;
+  }
+
+  .colspan-xl-4 {
+    --width: 4;
+  }
+
+  .colspan-xl-5 {
+    --width: 5;
+  }
+
+  .colspan-xl-6 {
+    --width: 6;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 64rem;
+  margin: auto;
 }

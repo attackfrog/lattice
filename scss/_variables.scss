@@ -1,4 +1,11 @@
 // Page Layout      -----------------------------------------------------------
 
-$container-width: 1000px;
+$container-width: 64rem;
 
+$grid-columns: 6;
+$grid-gap: 1rem;
+
+// The breakpoint values below are taken from UIkit 3
+$breakpoint-small: 640px;   // Phone landscape
+$breakpoint-medium: 960px;  // Tablet Landscape
+$breakpoint-large: 1200px;  // Desktop

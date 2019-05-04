@@ -1,0 +1,54 @@
+// Grid Layout
+
+.gridbox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    grid-gap: $grid-gap $grid-gap;
+    gap: $grid-gap $grid-gap;   // grid-gap will be deprecated
+}
+
+.gridbox-gapless {
+    @extend .gridbox;
+    grid-gap: 0 0;
+    gap: 0 0;   // grid-gap will be deprecated
+}
+
+
+[class*="colspan-"] {
+    grid-column: span var(--width, #{$grid-columns});
+}
+
+// Column widths at any breakpoint (colspan-#)
+@for $i from 1 through $grid-columns {
+    .colspan-#{$i} {
+        --width: #{$i};
+    }
+}
+
+// Column widths above the small breakpoint (colspan-m-#)
+@media (min-width: $breakpoint-small) {
+    @for $i from 1 through $grid-columns {
+        .colspan-m-#{$i} {
+            --width: #{$i};
+        }
+    }
+}
+
+// Column widths above the medium breakpoint (colspan-l-#)
+@media (min-width: $breakpoint-medium) {
+    @for $i from 1 through $grid-columns {
+        .colspan-l-#{$i} {
+            --width: #{$i};
+        }
+    }
+}
+
+// Column widths above the medium breakpoint (colspan-xl-#)
+@media (min-width: $breakpoint-large) {
+    @for $i from 1 through $grid-columns {
+        .colspan-xl-#{$i} {
+            --width: #{$i};
+        }
+    }
+}
