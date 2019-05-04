@@ -1,2 +1,2 @@
-# lattice
+# Lattice
 A simple CSS framework.
