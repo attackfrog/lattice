@@ -45,7 +45,7 @@
     }
 }
 
-// Column widths above the medium breakpoint (colspan-xl-*)
+// Column widths above the large breakpoint (colspan-xl-*)
 @media (min-width: $breakpoint-large) {
     @for $i from 1 through $grid-columns {
         .colspan-xl-#{$i} {

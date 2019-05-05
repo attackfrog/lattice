@@ -1,7 +1,12 @@
 // A container for page content
 
-.container {
+.container-full {
     width: 100%;
+    padding: $container-padding;
+}
+
+.container {
+    @extend .container-full;
     max-width: $container-width;
     margin: auto;
 }

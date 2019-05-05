@@ -1,0 +1,130 @@
+// Lattice's font choice is Source Sans Pro by Adobe 
+// (Obtained via Font Squirrel: https://www.fontsquirrel.com/fonts/source-sans-pro)
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/PTS55F-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/PTS75F-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/PTS56F-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/PTS76F-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+// Font sizing      -----------------------------------------------------------
+
+html {
+    font-family: $font-family;
+    font-size: $base-font-size;
+    --font-scale: #{$font-scale-ratio-small};
+}
+
+// Headers increase in size exponentially according to the font scale
+h6 {
+    font-size: $base-font-size;
+}
+
+h5 {
+    font-size: calc(#{$base-font-size} * var(--font-scale));
+}
+
+h4 {
+    font-size: calc(#{$base-font-size} * var(--font-scale) 
+        * var(--font-scale));
+}
+
+h3 {
+    font-size: calc(#{$base-font-size} * var(--font-scale) 
+        * var(--font-scale) * var(--font-scale));
+}
+
+h2 {
+    font-size: calc(#{$base-font-size} * var(--font-scale) 
+        * var(--font-scale) * var(--font-scale) * var(--font-scale));
+}
+
+h1 {
+    font-size: calc(#{$base-font-size} * var(--font-scale) 
+        * var(--font-scale) * var(--font-scale) * var(--font-scale) 
+        * var(--font-scale));
+}
+
+// Increase the font scale for larger screens
+@media (min-width: $breakpoint-medium) {
+    html {
+        --font-scale: #{$font-scale-ratio-large};
+    }
+}
+
+// Font spacing     -----------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0.75em 0;
+}
+
+// Text styles      -----------------------------------------------------------
+
+.text-lead {
+    font-size: 1.5em;
+    // TODO: Color me slightly to be more visible
+}
+
+.text-large {
+    font-size: 1.5em;
+}
+
+.text-small {
+    font-size: 0.75em;
+}
+
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+code {
+    background-color: lightgray;    // TEMPORARY
+    padding: 0.2em 0.4em;
+    font-size: 0.85em;
+    border-radius: $code-border-radius;
+}
+
+pre {
+    @extend code;
+    padding: 0.7em;
+    color: white;                   // TEMPORARY
+    background-color: #333;         // TEMPORARY
+    max-width: 100%;
+    overflow-x: auto;
+}

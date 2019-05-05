@@ -3,20 +3,43 @@
     <head>
         <title>Lattice Test Page</title>
         <link rel="stylesheet" href="css/lattice.css">
-        <style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <style>
             * {
                 border: 1px solid #ffbf00;
             }
-        </style>
+        </style> -->
     </head>
     <body>
         <div class="container gridbox">
             <div class="colspan-1 colspan-m-3">Hello</div>
             <div class="colspan-2">Hello</div>
             <div class="colspan-l-3">Hello</div>
-            <div class="colspan-4">Hello</div>
+            <div class="colspan-4 colspan-l-3">Hello</div>
             <div class="colspan-5">Hello</div>
             <div class="colspan-6 colspan-l-4 colspan-xl-2">Hello</div>
+        </div>
+        <div class="container-full">
+            <h1>Heading 1</h1>
+            <p>Voluptatem ut perferendis voluptatum mollitia nihil voluptates. Id sed atque quidem quo. Laborum est enim cupiditate est natus doloremque. Nostrum optio ipsa adipisci voluptatem enim ipsa.</p>
+            <p>Cum culpa et dolor et est autem eos quia. Odit maxime veritatis libero. Dolorem et mollitia omnis magni rerum.</p>
+            <h2>Heading 2</h2>
+            <p class="text-justify">Modi velit pariatur voluptatem voluptas vitae ducimus. Voluptas sint eaque molestiae cupiditate. Soluta atque perspiciatis iusto vel ex. Exercitationem asperiores repellat hic rerum impedit quam ipsam culpa. Et quia explicabo expedita fuga. Voluptatem aut et laboriosam quidem natus error laboriosam.</p>
+            <p>Commodi placeat unde tenetur. Impedit omnis aut quia pariatur et dignissimos. <code>Here's a code sample inside a paragraph.</code> Omnis quam libero voluptatem aliquam aut dicta est eveniet. Quo maxime accusamus et.</p>
+            <h3>Heading 3</h3>
+            <p class="text-right">A et accusamus tempore est eius. Aut illo et aperiam iusto iusto at omnis eligendi. Est voluptates enim nulla dicta repudiandae laborum rerum reiciendis. Unde mollitia ut temporibus voluptatum veritatis.</p>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Paragraph with <b>bold</b> and <i>italic</i> text. <code>Here's a code sample inside a paragraph.</code></p>
+            <pre>code {
+    background-color: lightgray;    // TEMPORARY
+    padding: 0.2em 0.4em;
+    font-size: 0.85em;
+    border-radius: $code-border-radius;
+    $font-scale-ratio-small: 1.2;   // for small screens (below medium breakpoint)
+}</pre>
+            <p class="text-lead">Here's a leader sentence!</p>
         </div>
     </body>
 </html>

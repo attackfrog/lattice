@@ -1,3 +1,110 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/PTS55F-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/PTS75F-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/PTS56F-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/PTS76F-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+html {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  --font-scale: 1.2;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: calc(16px * var(--font-scale));
+}
+
+h4 {
+  font-size: calc(16px * var(--font-scale) * var(--font-scale));
+}
+
+h3 {
+  font-size: calc(16px * var(--font-scale) * var(--font-scale) * var(--font-scale));
+}
+
+h2 {
+  font-size: calc(16px * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+}
+
+h1 {
+  font-size: calc(16px * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+}
+
+@media (min-width: 960px) {
+  html {
+    --font-scale: 1.333;
+  }
+}
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0.75em 0;
+}
+
+.text-lead {
+  font-size: 1.5em;
+}
+
+.text-large {
+  font-size: 1.5em;
+}
+
+.text-small {
+  font-size: 0.75em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+code, pre {
+  background-color: lightgray;
+  padding: 0.2em 0.4em;
+  font-size: 0.85em;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 0.7em;
+  color: white;
+  background-color: #333;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .gridbox, .gridbox-gapless {
   width: 100%;
   display: grid;
@@ -114,8 +221,23 @@
     --width: 6;
   }
 }
-.container {
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body *,
+body *::before,
+body *::after {
+  box-sizing: inherit;
+}
+
+.container-full, .container {
   width: 100%;
+  padding: 1rem;
+}
+
+.container {
   max-width: 64rem;
   margin: auto;
 }
