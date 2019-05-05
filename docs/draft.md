@@ -53,3 +53,13 @@ There are several classes you can use to style text:
 * `text-justify` - Justifies text.
 
 In addition, `<code>` and `<pre>` elements have been styled to stand out more.
+
+### Customization
+
+Add the following to `_variables-custom.scss` to change their values:
+
+* `$base-font-size` - change the base font size (16px by default)
+* `$font-family` - change the font family
+* `$font-scale-ratio-large` - change the font scaling ratio at larger screen sizes
+* `$font-scale-ratio-small` - change the font scaling ratio at smaller screen sizes
+* `$code-border-radius` - change the border radius of `<code>` and `<pre>` elements
