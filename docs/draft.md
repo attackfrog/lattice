@@ -32,7 +32,7 @@ If you just provide a width at larger screen sizes, the element will be full wid
 
 ### Customization
 
-If you want a different number of columns than 6, add the variable `$grid-columns` to `_variables_custom.scss` with your desired value. 
+If you want a different number of columns than 6, add the variable `$grid-columns` to `_variables-custom.scss` with your desired value. 
 
 You can also customize the size of the gap between columns and rows with the `$grid-gap` variable.
 
