@@ -35,3 +35,21 @@ If you just provide a width at larger screen sizes, the element will be full wid
 If you want a different number of columns than 6, add the variable `$grid-columns` to `_variables_custom.scss` with your desired value. 
 
 You can also customize the size of the gap between columns and rows with the `$grid-gap` variable.
+
+---------------------------------------------------------------------------
+
+## Text Formatting
+
+Lattice uses [PT Sans](https://www.fontsquirrel.com/fonts/pt-sans) as its base font face. Heading sizes are scaled according to a "minor third" 1.2 ratio on smaller screens and at a "perfect fourth" 1.333 ratio on larger screens. 
+
+There are several classes you can use to style text:
+
+* `text-lead` - Increases text size and makes it more visible. Use this for a leading paragraph.
+* `text-large` - Increases text size.
+* `text-small` - Decreases text size.
+* `text-left` - Aligns text to the left.
+* `text-right` - Aligns text to the right.
+* `text-center` - Centers text.
+* `text-justify` - Justifies text.
+
+In addition, `<code>` and `<pre>` elements have been styled to stand out more.
