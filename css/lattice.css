@@ -1,3 +1,98 @@
+html {
+  color: #321b2d;
+  background-color: #f1f3f4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0d6a73;
+}
+
+code, pre {
+  background-color: #e6b3da;
+  color: #1b3032;
+}
+
+pre {
+  background-color: #1b3032;
+  color: #f1f3f4;
+}
+
+a:link {
+  color: #0d6a73;
+}
+
+a:visited {
+  color: #730d5d;
+}
+
+.bgcolor-primary-light {
+  background-color: #b3e1e6;
+  color: #1b3032;
+}
+
+.bgcolor-primary-bright {
+  background-color: #1ad5e6;
+  color: #1b3032;
+}
+
+.bgcolor-primary-dim {
+  background-color: #0d6a73;
+  color: #f1f3f4;
+}
+
+.bgcolor-primary-dark {
+  background-color: #1b3032;
+  color: #f1f3f4;
+}
+
+.bgcolor-secondary-light {
+  background-color: #e6b3da;
+  color: #321b2d;
+}
+
+.bgcolor-secondary-bright {
+  background-color: #e61ab9;
+  color: #321b2d;
+}
+
+.bgcolor-secondary-dim {
+  background-color: #730d5d;
+  color: #f4f1f3;
+}
+
+.bgcolor-secondary-dark {
+  background-color: #321b2d;
+  color: #f4f1f3;
+}
+
+.bgcolor-grey-light,
+.bgcolor-gray-light {
+  background-color: #cccccc;
+  color: #262626;
+}
+
+.bgcolor-grey-bright,
+.bgcolor-gray-bright {
+  background-color: gray;
+  color: #0d0d0d;
+}
+
+.bgcolor-grey-dim,
+.bgcolor-gray-dim {
+  background-color: #404040;
+  color: #f2f2f2;
+}
+
+.bgcolor-grey-dark,
+.bgcolor-gray-dark {
+  background-color: #262626;
+  color: #f2f2f2;
+}
+
+.text-lead {
+  color: #730d5d;
+}
+
 @font-face {
   font-family: "PT Sans";
   src: url("fonts/PTS55F-webfont.woff") format("woff");
@@ -59,7 +154,30 @@ h1 {
 }
 h1, h2, h3, h4, h5, h6, p {
   padding: 0;
-  margin: 0.75em 0;
+  margin: 0.7em 0;
+}
+
+code, pre {
+  padding: 0.2em 0.4em;
+  font-size: 0.85em;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 0.7em;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+a:link,
+a:visited {
+  text-decoration-line: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
 }
 
 .text-lead {
@@ -90,27 +208,12 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: justify;
 }
 
-code, pre {
-  background-color: lightgray;
-  padding: 0.2em 0.4em;
-  font-size: 0.85em;
-  border-radius: 3px;
-}
-
-pre {
-  padding: 0.7em;
-  color: white;
-  background-color: #333;
-  max-width: 100%;
-  overflow-x: auto;
-}
-
 .gridbox, .gridbox-gapless {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1rem 1rem;
-  gap: 1rem 1rem;
+  grid-gap: 2rem 2rem;
+  gap: 2rem 2rem;
 }
 
 .gridbox-gapless {
@@ -234,7 +337,7 @@ body *::after {
 
 .container-full, .container {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .container {

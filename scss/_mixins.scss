@@ -1,0 +1,51 @@
+// Color functions and mixins   -----------------------------------------------
+
+// Color shades
+@function color-light($hue) {
+    @return hsl($hue, $saturation-light, $lightness-light);
+}
+
+@function color-bright($hue) {
+    @return hsl($hue, $saturation-bright, $lightness-bright);
+}
+
+@function color-dim($hue) {
+    @return hsl($hue, $saturation-dim, $lightness-dim);
+}
+
+@function color-dark($hue) {
+    @return hsl($hue, $saturation-dark, $lightness-dark);
+}
+
+@function color-offwhite($hue) {
+    @return hsl($hue, $saturation-offwhite, $lightness-offwhite);
+}
+
+@function color-black($hue) {
+    @return hsl($hue, $saturation-black, $lightness-black);
+}
+
+// Greyscale shades
+@function color-grey-light() {
+    @return hsl(0, 0, $lightness-light);
+}
+
+@function color-grey-bright() {
+    @return hsl(0, 0, $lightness-bright);
+}
+
+@function color-grey-dim() {
+    @return hsl(0, 0, $lightness-dim);
+}
+
+@function color-grey-dark() {
+    @return hsl(0, 0, $lightness-dark);
+}
+
+@function color-grey-offwhite() {
+    @return hsl(0, 0, $lightness-offwhite);
+}
+
+@function color-grey-black() {
+    @return hsl(0, 0, $lightness-black);
+}

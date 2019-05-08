@@ -29,6 +29,7 @@
     font-style: italic;
 }
 
+
 // Font sizing      -----------------------------------------------------------
 
 html {
@@ -74,12 +75,41 @@ h1 {
     }
 }
 
+
 // Font spacing     -----------------------------------------------------------
 
 h1, h2, h3, h4, h5, h6, p {
     padding: 0;
-    margin: 0.75em 0;
+    margin: 0.7em 0;
 }
+
+
+// Standard element styling ---------------------------------------------------
+
+code {
+    padding: 0.2em 0.4em;
+    font-size: 0.85em;
+    border-radius: $code-border-radius;
+}
+
+pre {
+    @extend code;
+    padding: 0.7em;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+a:link,
+a:visited {
+    text-decoration-line: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
 
 // Text styles      -----------------------------------------------------------
 
@@ -96,7 +126,6 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 0.75em;
 }
 
-
 .text-left {
     text-align: left;
 }
@@ -111,20 +140,4 @@ h1, h2, h3, h4, h5, h6, p {
 
 .text-justify {
     text-align: justify;
-}
-
-code {
-    background-color: lightgray;    // TEMPORARY
-    padding: 0.2em 0.4em;
-    font-size: 0.85em;
-    border-radius: $code-border-radius;
-}
-
-pre {
-    @extend code;
-    padding: 0.7em;
-    color: white;                   // TEMPORARY
-    background-color: #333;         // TEMPORARY
-    max-width: 100%;
-    overflow-x: auto;
 }

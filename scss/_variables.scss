@@ -1,7 +1,7 @@
 // Page Layout      -----------------------------------------------------------
 
 $grid-columns: 6;
-$grid-gap: 1rem;
+$grid-gap: 2rem;
 
 $container-width: 64rem;
 $container-padding: $grid-gap;
@@ -19,3 +19,27 @@ $font-scale-ratio-large: 1.333; // for large screens (above medium breakpoint)
 $font-scale-ratio-small: 1.2;   // for small screens (below medium breakpoint)
 $font-family: 'PT Sans', sans-serif;
 $code-border-radius: 3px;
+
+
+// Colors           -----------------------------------------------------------
+
+$hue-primary: 185;  // (Values 0-255 for hsl)
+$hue-secondary: $hue-primary + 128; // (the complement of the primary color)
+
+$saturation-light: 50%;
+$lightness-light: 80%;
+
+$saturation-bright: 80%;
+$lightness-bright: 50%;
+
+$saturation-dim: 80%;
+$lightness-dim: 25%;
+
+$saturation-dark: 30%;
+$lightness-dark: 15%;
+
+$saturation-offwhite: 10%;
+$lightness-offwhite: 95%;
+
+$saturation-black: 50%;
+$lightness-black: 5%;

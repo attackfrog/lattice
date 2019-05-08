@@ -1,0 +1,110 @@
+// Default text colors   ------------------------------------------------------
+
+html {
+    color: color-dark($hue-secondary);
+    background-color: color-offwhite($hue-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: color-dim($hue-primary);
+}
+
+code {
+    background-color: color-light($hue-secondary);
+    color: color-dark($hue-primary);
+}
+
+pre {
+    background-color: color-dark($hue-primary);
+    color: color-offwhite($hue-primary);
+}
+
+a:link {
+    color: color-dim($hue-primary);
+}
+
+a:visited {
+    color: color-dim($hue-secondary);
+}
+
+
+// Color classes    -----------------------------------------------------------
+
+// Primary colors
+
+.bgcolor-primary-light {
+    background-color: color-light($hue-primary);
+    color: color-dark($hue-primary);
+}
+
+.bgcolor-primary-bright {
+    background-color: color-bright($hue-primary);
+    color: color-dark($hue-primary);
+}
+
+.bgcolor-primary-dim {
+    background-color: color-dim($hue-primary);
+    color: color-offwhite($hue-primary);
+}
+
+.bgcolor-primary-dark {
+    background-color: color-dark($hue-primary);
+    color: color-offwhite($hue-primary);
+}
+
+
+// Secondary colors
+
+.bgcolor-secondary-light {
+    background-color: color-light($hue-secondary);
+    color: color-dark($hue-secondary);
+}
+
+.bgcolor-secondary-bright {
+    background-color: color-bright($hue-secondary);
+    color: color-dark($hue-secondary);
+}
+
+.bgcolor-secondary-dim {
+    background-color: color-dim($hue-secondary);
+    color: color-offwhite($hue-secondary);
+}
+
+.bgcolor-secondary-dark {
+    background-color: color-dark($hue-secondary);
+    color: color-offwhite($hue-secondary);
+}
+
+
+// Greyscale colors
+
+.bgcolor-grey-light,
+.bgcolor-gray-light {
+    background-color: color-grey-light();
+    color: color-grey-dark();
+}
+
+.bgcolor-grey-bright,
+.bgcolor-gray-bright {
+    background-color: color-grey-bright();
+    color: color-grey-black();
+}
+
+.bgcolor-grey-dim,
+.bgcolor-gray-dim {
+    background-color: color-grey-dim();
+    color: color-grey-offwhite();
+}
+
+.bgcolor-grey-dark,
+.bgcolor-gray-dark {
+    background-color: color-grey-dark();
+    color: color-grey-offwhite();
+}
+
+
+// Miscellaneous    -----------------------------------------------------------
+
+.text-lead {
+    color: color-dim($hue-secondary);
+}
