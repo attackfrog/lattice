@@ -326,7 +326,6 @@ a:active {
   }
 }
 html {
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -334,6 +333,10 @@ html *,
 html *::before,
 html *::after {
   box-sizing: inherit;
+}
+
+body {
+  margin: 0;
 }
 
 .container-full, .container {
