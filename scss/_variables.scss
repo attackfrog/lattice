@@ -1,10 +1,11 @@
 // Page Layout      -----------------------------------------------------------
 
 $grid-columns: 6;
-$grid-gap: 2rem;
+$grid-gap-cols: 2rem;           // gap between columns
+$grid-gap-rows: $grid-gap-cols; // gap between rows
 
 $container-width: 64rem;
-$container-padding: $grid-gap;
+$container-padding: $grid-gap-cols;
 
 // The breakpoint values below are taken from UIkit 3
 $breakpoint-small: 640px;   // Phone landscape
@@ -14,10 +15,11 @@ $breakpoint-large: 1200px;  // Desktop
 
 // Type Styling     -----------------------------------------------------------
 
+$font-family: 'PT Sans', sans-serif;
 $base-font-size: 16px;
 $font-scale-ratio-large: 1.333; // for large screens (above medium breakpoint)
 $font-scale-ratio-small: 1.2;   // for small screens (below medium breakpoint)
-$font-family: 'PT Sans', sans-serif;
+$font-spacing-ratio: 1.2;
 $code-border-radius: 3px;
 
 

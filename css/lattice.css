@@ -25,6 +25,10 @@ a:visited {
   color: #730d5d;
 }
 
+.text-lead {
+  color: #730d5d;
+}
+
 .bgcolor-primary-light {
   background-color: #b3e1e6;
   color: #1b3032;
@@ -89,10 +93,6 @@ a:visited {
   color: #f2f2f2;
 }
 
-.text-lead {
-  color: #730d5d;
-}
-
 @font-face {
   font-family: "PT Sans";
   src: url("fonts/PTS55F-webfont.woff") format("woff");
@@ -125,26 +125,32 @@ html {
 
 h6 {
   font-size: 16px;
+  margin: 0.84rem 0;
 }
 
 h5 {
   font-size: calc(16px * var(--font-scale));
+  margin: 1.008rem 0;
 }
 
 h4 {
   font-size: calc(16px * var(--font-scale) * var(--font-scale));
+  margin: 1.2096rem 0;
 }
 
 h3 {
   font-size: calc(16px * var(--font-scale) * var(--font-scale) * var(--font-scale));
+  margin: 1.45152rem 0;
 }
 
 h2 {
   font-size: calc(16px * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+  margin: 1.741824rem 0;
 }
 
 h1 {
   font-size: calc(16px * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+  margin: 2.0901888rem 0;
 }
 
 @media (min-width: 960px) {
@@ -152,11 +158,6 @@ h1 {
     --font-scale: 1.333;
   }
 }
-h1, h2, h3, h4, h5, h6, p {
-  padding: 0;
-  margin: 0.7em 0;
-}
-
 code, pre {
   padding: 0.2em 0.4em;
   font-size: 0.85em;
@@ -324,14 +325,14 @@ a:active {
     --width: 6;
   }
 }
-body {
+html {
   margin: 0;
   box-sizing: border-box;
 }
 
-body *,
-body *::before,
-body *::after {
+html *,
+html *::before,
+html *::after {
   box-sizing: inherit;
 }
 

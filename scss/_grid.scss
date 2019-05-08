@@ -4,8 +4,8 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
-    grid-gap: $grid-gap $grid-gap;
-    gap: $grid-gap $grid-gap;   // grid-gap will be deprecated
+    grid-gap: $grid-gap-rows $grid-gap-cols;
+    gap: $grid-gap-rows $grid-gap-cols;   // grid-gap will be deprecated
 }
 
 .gridbox-gapless {

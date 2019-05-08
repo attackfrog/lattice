@@ -41,31 +41,42 @@ html {
 // Headers increase in size exponentially according to the font scale
 h6 {
     font-size: $base-font-size;
+    margin: (0.7rem * $font-spacing-ratio) 0;
 }
 
 h5 {
     font-size: calc(#{$base-font-size} * var(--font-scale));
+    margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio) 0;
 }
 
 h4 {
     font-size: calc(#{$base-font-size} * var(--font-scale) 
         * var(--font-scale));
+    margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
+        * $font-spacing-ratio) 0;
 }
 
 h3 {
     font-size: calc(#{$base-font-size} * var(--font-scale) 
         * var(--font-scale) * var(--font-scale));
+    margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
+        * $font-spacing-ratio * $font-spacing-ratio) 0;
 }
 
 h2 {
     font-size: calc(#{$base-font-size} * var(--font-scale) 
         * var(--font-scale) * var(--font-scale) * var(--font-scale));
+    margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
+        * $font-spacing-ratio * $font-spacing-ratio * $font-spacing-ratio) 0;
 }
 
 h1 {
     font-size: calc(#{$base-font-size} * var(--font-scale) 
         * var(--font-scale) * var(--font-scale) * var(--font-scale) 
         * var(--font-scale));
+    margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
+        * $font-spacing-ratio * $font-spacing-ratio * $font-spacing-ratio 
+        * $font-spacing-ratio) 0;
 }
 
 // Increase the font scale for larger screens
@@ -73,14 +84,6 @@ h1 {
     html {
         --font-scale: #{$font-scale-ratio-large};
     }
-}
-
-
-// Font spacing     -----------------------------------------------------------
-
-h1, h2, h3, h4, h5, h6, p {
-    padding: 0;
-    margin: 0.7em 0;
 }
 
 
