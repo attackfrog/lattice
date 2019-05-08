@@ -27,6 +27,10 @@ a:visited {
     color: color-dim($hue-secondary);
 }
 
+.text-lead {
+    color: color-dim($hue-secondary);
+}
+
 
 // Color classes    -----------------------------------------------------------
 
@@ -100,11 +104,4 @@ a:visited {
 .bgcolor-gray-dark {
     background-color: color-grey-dark();
     color: color-grey-offwhite();
-}
-
-
-// Miscellaneous    -----------------------------------------------------------
-
-.text-lead {
-    color: color-dim($hue-secondary);
 }
