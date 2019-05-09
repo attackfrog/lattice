@@ -1,0 +1,43 @@
+// Styles to show/hide content at different breakpoints
+
+.hidden-small,
+.hidden-medium,
+.hidden-large {
+    display: none;
+}
+
+@media (min-width: $breakpoint-small) {
+    .hidden-small {
+        display: initial;
+    }
+
+    .shown-small {
+        display: none;
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .hidden-small,
+    .hidden-medium {
+        display: initial;
+    }
+
+    .shown-small,
+    .shown-medium {
+        display: none;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .hidden-small,
+    .hidden-medium,
+    .hidden-large {
+        display: initial;
+    }
+
+    .shown-small,
+    .shown-medium,
+    .shown-large {
+        display: none;
+    }
+}

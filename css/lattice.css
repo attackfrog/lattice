@@ -411,3 +411,43 @@ body {
   max-width: 64rem;
   margin: auto;
 }
+
+.hidden-small,
+.hidden-medium,
+.hidden-large {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hidden-small {
+    display: initial;
+  }
+
+  .shown-small {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .hidden-small,
+.hidden-medium {
+    display: initial;
+  }
+
+  .shown-small,
+.shown-medium {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-small,
+.hidden-medium,
+.hidden-large {
+    display: initial;
+  }
+
+  .shown-small,
+.shown-medium,
+.shown-large {
+    display: none;
+  }
+}
