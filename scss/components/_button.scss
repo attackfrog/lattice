@@ -1,1 +1,23 @@
 // Button Style
+
+.button {
+    @include button();
+}
+
+.button-primary {
+    @include button-color(color-dim($hue-primary), color-offwhite($hue-primary));
+}
+
+.button-secondary {
+    @include button-color(color-dim($hue-secondary), color-offwhite($hue-secondary));
+}
+
+.button-grey,
+.button-gray {
+    @include button-color(color-grey-dim(), color-grey-offwhite());
+}
+
+.button-clear {
+    @include button-color(rgba(0, 0, 0, 0), color-dark($hue-secondary));
+    border: 1px solid transparentize(color-dark($hue-secondary), 0.8);
+}
