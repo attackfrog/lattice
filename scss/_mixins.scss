@@ -1,6 +1,10 @@
+// Mixins and functions for all styles and structures
+
+
 // Color functions  -----------------------------------------------------------
 
 // Color shades
+
 @function color-light($hue) {
     @return hsl($hue, $saturation-light, $lightness-light);
 }
@@ -25,7 +29,9 @@
     @return hsl($hue, $saturation-black, $lightness-black);
 }
 
+
 // Greyscale shades
+
 @function color-grey-light() {
     @return hsl(0, 0, $lightness-light);
 }
@@ -55,11 +61,11 @@
 
 // Button
 
-@mixin button() {
+@mixin button($size) {
     border: none;
     border-radius: $button-border-radius;
-    padding: 0.25em 0.85em;
-    font-size: 1.1em;
+    padding: ($button-padding-sides * $size) ($button-padding-topbot * $size);
+    font-size: ($button-font-size * $size);
 
     &:hover,
     &:active {
@@ -74,10 +80,16 @@
 
     &:hover,
     &:focus {
-        background-color: darken($bgcolor, 5%);
+        background-color: darken($bgcolor, $button-interact-shading);
     }
 
     &:active {
-        background-color: lighten($bgcolor, 5%);
+        background-color: lighten($bgcolor, $button-interact-shading);
     }
+}
+
+// Card
+
+@mixin card() {
+
 }

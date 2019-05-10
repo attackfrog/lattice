@@ -1,7 +1,19 @@
 // Button Style
 
 .button {
-    @include button();
+    @include button($button-scale);
+}
+
+.button-small {
+    @include button($button-small-scale);
+}
+
+.button-large {
+    @include button($button-large-scale);
+}
+
+.button-huge {
+    @include button($button-huge-scale);
 }
 
 .button-primary {

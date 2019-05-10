@@ -116,7 +116,7 @@ a:active {
 
 // Text styles      -----------------------------------------------------------
 
-.text-lead {
+.text-lead {            // this style is also colored in _color.scss
     font-size: 1.5em;
 }
 
@@ -142,4 +142,12 @@ a:active {
 
 .text-justify {
     text-align: justify;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
 }

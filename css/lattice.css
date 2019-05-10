@@ -1,6 +1,5 @@
 html {
   color: #321b2d;
-  background-color: #f1f3f4;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -209,6 +208,14 @@ a:active {
   text-align: justify;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
 .gridbox, .gridbox-gapless {
   width: 100%;
   display: grid;
@@ -346,6 +353,36 @@ body {
   font-size: 1.1em;
 }
 .button:hover, .button:active {
+  cursor: pointer;
+}
+
+.button-small {
+  border: none;
+  border-radius: 3px;
+  padding: 0.2em 0.68em;
+  font-size: 0.88em;
+}
+.button-small:hover, .button-small:active {
+  cursor: pointer;
+}
+
+.button-large {
+  border: none;
+  border-radius: 3px;
+  padding: 0.3em 1.02em;
+  font-size: 1.32em;
+}
+.button-large:hover, .button-large:active {
+  cursor: pointer;
+}
+
+.button-huge {
+  border: none;
+  border-radius: 3px;
+  padding: 0.375em 1.275em;
+  font-size: 1.65em;
+}
+.button-huge:hover, .button-huge:active {
   cursor: pointer;
 }
 

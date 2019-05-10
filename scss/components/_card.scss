@@ -1,0 +1,5 @@
+// Decorative container element
+
+.card {
+    @include card();
+}
