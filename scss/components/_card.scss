@@ -2,4 +2,16 @@
 
 .card {
     @include card();
+
+    .card-heading {
+        @include card-heading();
+    }
+
+    .card-body {
+        @include card-body();
+    }
+}
+
+.card-expand {
+    width: 100%;
 }

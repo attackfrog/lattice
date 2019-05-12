@@ -13,7 +13,7 @@ code, pre {
 
 pre {
   background-color: #1b3032;
-  color: #f1f3f4;
+  color: #f4f1f3;
 }
 
 a:link {
@@ -28,44 +28,54 @@ a:visited {
   color: #730d5d;
 }
 
+.bgcolor-primary-offwhite {
+  background-color: #f1f3f4;
+  color: #321b2d;
+}
+
 .bgcolor-primary-light {
   background-color: #b3e1e6;
-  color: #1b3032;
+  color: #321b2d;
 }
 
 .bgcolor-primary-bright {
   background-color: #1ad5e6;
-  color: #1b3032;
+  color: #321b2d;
 }
 
 .bgcolor-primary-dim {
   background-color: #0d6a73;
-  color: #f1f3f4;
+  color: #f4f1f3;
 }
 
 .bgcolor-primary-dark {
   background-color: #1b3032;
-  color: #f1f3f4;
+  color: #f4f1f3;
+}
+
+.bgcolor-secondary-offwhite {
+  background-color: #f4f1f3;
+  color: #1b3032;
 }
 
 .bgcolor-secondary-light {
   background-color: #e6b3da;
-  color: #321b2d;
+  color: #1b3032;
 }
 
 .bgcolor-secondary-bright {
   background-color: #e61ab9;
-  color: #321b2d;
+  color: #1b3032;
 }
 
 .bgcolor-secondary-dim {
   background-color: #730d5d;
-  color: #f4f1f3;
+  color: #f1f3f4;
 }
 
 .bgcolor-secondary-dark {
   background-color: #321b2d;
-  color: #f4f1f3;
+  color: #f1f3f4;
 }
 
 .bgcolor-grey-light,
@@ -437,6 +447,28 @@ body {
 }
 .button-clear:active {
   background-color: rgba(13, 13, 13, 0);
+}
+
+.card {
+  width: fit-content;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+.card .card-heading {
+  color: inherit;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 1.2rem 1.5rem 0.7rem;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+}
+.card .card-body {
+  padding: 1.2rem 1.5rem;
+}
+
+.card-expand {
+  width: 100%;
 }
 
 .container-full, .container {

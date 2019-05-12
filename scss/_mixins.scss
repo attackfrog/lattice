@@ -91,5 +91,21 @@
 // Card
 
 @mixin card() {
+    width: fit-content;
+    margin: $card-margin;
+    border-radius: $card-border-radius;
+    box-shadow: $card-shadow;
+}
 
+@mixin card-heading() {
+    color: inherit;
+    font-size: $card-heading-font-size;
+    font-weight: $card-heading-font-weight;
+    margin: 0;
+    padding: $card-padding $card-heading-padding-bottom;
+    box-shadow: $card-heading-shadow;
+}
+
+@mixin card-body {
+    padding: $card-padding;
 }

@@ -15,7 +15,7 @@ code {
 
 pre {
     background-color: color-dark($hue-primary);
-    color: color-offwhite($hue-primary);
+    color: color-offwhite($hue-secondary);
 }
 
 a:link {
@@ -35,47 +35,57 @@ a:visited {
 
 // Primary colors
 
+.bgcolor-primary-offwhite {
+    background-color: color-offwhite($hue-primary);
+    color: color-dark($hue-secondary);
+}
+
 .bgcolor-primary-light {
     background-color: color-light($hue-primary);
-    color: color-dark($hue-primary);
+    color: color-dark($hue-secondary);
 }
 
 .bgcolor-primary-bright {
     background-color: color-bright($hue-primary);
-    color: color-dark($hue-primary);
+    color: color-dark($hue-secondary);
 }
 
 .bgcolor-primary-dim {
     background-color: color-dim($hue-primary);
-    color: color-offwhite($hue-primary);
+    color: color-offwhite($hue-secondary);
 }
 
 .bgcolor-primary-dark {
     background-color: color-dark($hue-primary);
-    color: color-offwhite($hue-primary);
+    color: color-offwhite($hue-secondary);
 }
 
 
 // Secondary colors
 
+.bgcolor-secondary-offwhite {
+    background-color: color-offwhite($hue-secondary);
+    color: color-dark($hue-primary);
+}
+
 .bgcolor-secondary-light {
     background-color: color-light($hue-secondary);
-    color: color-dark($hue-secondary);
+    color: color-dark($hue-primary);
 }
 
 .bgcolor-secondary-bright {
     background-color: color-bright($hue-secondary);
-    color: color-dark($hue-secondary);
+    color: color-dark($hue-primary);
 }
 
 .bgcolor-secondary-dim {
     background-color: color-dim($hue-secondary);
-    color: color-offwhite($hue-secondary);
+    color: color-offwhite($hue-primary);
 }
 
 .bgcolor-secondary-dark {
     background-color: color-dark($hue-secondary);
-    color: color-offwhite($hue-secondary);
+    color: color-offwhite($hue-primary);
 }
 
 

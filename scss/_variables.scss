@@ -1,3 +1,7 @@
+// Common Values    -----------------------------------------------------------
+
+$border-radius: 3px;
+
 // Page Layout      -----------------------------------------------------------
 
 $grid-columns: 6;
@@ -20,7 +24,7 @@ $base-font-size: 16px;
 $font-scale-ratio-large: 1.333; // for large screens (above medium breakpoint)
 $font-scale-ratio-small: 1.2;   // for small screens (below medium breakpoint)
 $font-spacing-ratio: 1.2;
-$code-border-radius: 3px;
+$code-border-radius: $border-radius;
 
 
 // Colors           -----------------------------------------------------------
@@ -49,7 +53,9 @@ $lightness-black: 5%;
 
 // Components       -----------------------------------------------------------
 
-$button-border-radius: 3px;
+// Button
+
+$button-border-radius: $border-radius;
 $button-padding-sides: 0.25em;
 $button-padding-topbot: 0.85em;
 $button-font-size: 1.1em;
@@ -59,3 +65,15 @@ $button-scale: 1;
 $button-small-scale: 0.8;
 $button-large-scale: 1.2;
 $button-huge-scale: 1.5;
+
+// Card
+
+$card-margin: 1rem;
+$card-padding: 1.2rem 1.5rem;
+$card-border-radius: $border-radius;
+$card-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+
+$card-heading-font-size: 1.2em;
+$card-heading-font-weight: bold;
+$card-heading-padding-bottom: 0.7rem;
+$card-heading-shadow: 0 1px rgba(0, 0, 0, 0.2);
