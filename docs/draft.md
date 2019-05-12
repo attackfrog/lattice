@@ -36,7 +36,7 @@ If you want a different number of columns than 6, add the variable `$grid-column
 
 You can also customize the size of the gap between columns and rows with the `$grid-gap` variable.
 
----------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## Text Formatting
 
@@ -63,3 +63,58 @@ Add the following to `_variables-custom.scss` to change their values:
 * `$font-scale-ratio-large` - change the font scaling ratio at larger screen sizes
 * `$font-scale-ratio-small` - change the font scaling ratio at smaller screen sizes
 * `$code-border-radius` - change the border radius of `<code>` and `<pre>` elements
+
+-------------------------------------------------------------------------------
+
+## Colors
+
+Lattice uses a two-color complementary color scheme. By default the primary color is turquoise/teal and the secondary color is pink, but this can of course be customized in the Sass files. A number of background color classes are provided for you to style elements (especially cards.) 
+
+* Primary colors
+    * `.bgcolor-primary-offwhite`
+    * `.bgcolor-primary-light`
+    * `.bgcolor-primary-bright`
+    * `.bgcolor-primary-dim`
+    * `.bgcolor-primary-dark`
+* Secondary colors
+    * `.bgcolor-secondary-offwhite`
+    * `.bgcolor-secondary-light`
+    * `.bgcolor-secondary-bright`
+    * `.bgcolor-secondary-dim`
+    * `.bgcolor-secondary-dark`
+* Greyscale colors (you can substitute 'gray' for 'grey' below if you prefer)
+    * `.bgcolor-grey-offwhite`
+    * `.bgcolor-grey-light`
+    * `.bgcolor-grey-bright`
+    * `.bgcolor-grey-dim`
+    * `.bgcolor-grey-dark`
+
+### Customization
+
+Customizing the colors in Lattice is easy. Change the default hues from turquoise/teal and pink by adding the variables `$hue-primary` and `$hue-secondary` to `_variables-custom.scss` with your own HSLA hue values (0-255). 
+
+You can also change the default saturation and lightness values for the various shades of each color. Add the custom variables `$saturation-*` and `$lightness-*` to `_variables-custom.scss`, replacing `*` with either `light`, `bright`, `dim`, `dark`, `offwhite`, or `black`.
+
+-------------------------------------------------------------------------------
+
+## Button Component
+
+Both button (`<button>`) and anchor (`<a>`) elements can be styled as buttons. 
+
+Buttons come in four sizes:
+* `.button`
+* `.button-small`
+* `.button-large`
+* `.button-huge`
+
+...and four colors:
+* `.button-primary`
+* `.button-secondary`
+* `.button-grey` (or `.button-gray`)
+* `.button-clear` (a transparent button)
+
+These size and color styles are intended to be combined, eg. `class="button button-primary"`.
+
+### Customization
+
+TODO

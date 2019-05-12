@@ -91,6 +91,12 @@ a:visited {
 
 // Greyscale colors
 
+.bgcolor-grey-offwhite,
+.bgcolor-gray-offwhite {
+    background-color: color-grey-offwhite();
+    color: color-grey-dark();
+}
+
 .bgcolor-grey-light,
 .bgcolor-gray-light {
     background-color: color-grey-light();

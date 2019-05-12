@@ -1,35 +1,44 @@
 // Button Style
 
-.button {
+button.button,
+a.button {
     @include button($button-scale);
 }
 
-.button-small {
+button.button-small,
+a.button-small {
     @include button($button-small-scale);
 }
 
-.button-large {
+button.button-large,
+a.button-large {
     @include button($button-large-scale);
 }
 
-.button-huge {
+button.button-huge,
+a.button-huge {
     @include button($button-huge-scale);
 }
 
-.button-primary {
+button.button-primary,
+a.button-primary {
     @include button-color(color-dim($hue-primary), color-offwhite($hue-primary));
 }
 
-.button-secondary {
+button.button-secondary,
+a.button-secondary {
     @include button-color(color-dim($hue-secondary), color-offwhite($hue-secondary));
 }
 
-.button-grey,
-.button-gray {
+button.button-grey,
+button.button-gray,
+a.button-grey,
+a.button-gray {
     @include button-color(color-grey-dim(), color-grey-offwhite());
 }
 
-.button-clear {
+button.button-clear,
+a.button-clear {
     @include button-color(rgba(0, 0, 0, 0), color-dark($hue-secondary));
     border: 1px solid transparentize(color-dark($hue-secondary), 0.8);
 }

@@ -66,6 +66,7 @@
     border-radius: $button-border-radius;
     padding: ($button-padding-sides * $size) ($button-padding-topbot * $size);
     font-size: ($button-font-size * $size);
+    text-decoration: none;
 
     &:hover,
     &:active {
