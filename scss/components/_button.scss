@@ -22,12 +22,12 @@ a.button-huge {
 
 button.button-primary,
 a.button-primary {
-    @include button-color(color-dim($hue-primary), color-offwhite($hue-primary));
+    @include button-color(color-dim($button-hue-primary), color-offwhite($button-hue-primary));
 }
 
 button.button-secondary,
 a.button-secondary {
-    @include button-color(color-dim($hue-secondary), color-offwhite($hue-secondary));
+    @include button-color(color-dim($button-hue-secondary), color-offwhite($button-hue-secondary));
 }
 
 button.button-grey,
@@ -39,6 +39,6 @@ a.button-gray {
 
 button.button-clear,
 a.button-clear {
-    @include button-color(rgba(0, 0, 0, 0), color-dark($hue-secondary));
-    border: 1px solid transparentize(color-dark($hue-secondary), 0.8);
+    @include button-color(rgba(0, 0, 0, 0), color-dark($button-hue-clear));
+    border: 1px solid transparentize(color-dark($button-hue-clear), 0.8);
 }
