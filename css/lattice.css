@@ -523,6 +523,26 @@ a.button-clear:active {
   margin: auto;
 }
 
+nav.navbar .container,
+nav.navbar .container-full {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+nav.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav.navbar li {
+  padding: 1rem;
+}
+nav.navbar li.fill {
+  flex-grow: 10;
+  padding: 0;
+}
+
 .hidden-small,
 .hidden-medium,
 .hidden-large {

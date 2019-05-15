@@ -1,0 +1,5 @@
+// A navigation bar which is responsive to different page widths
+
+nav.navbar {
+    @include navbar();
+}

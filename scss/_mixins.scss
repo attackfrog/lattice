@@ -110,3 +110,31 @@
 @mixin card-body {
     padding: $card-padding;
 }
+
+// Navbar
+
+@mixin navbar() {
+    .container,
+    .container-full {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        padding: 1rem;
+    }
+
+    // special divider to right-justify items that follow it
+    li.fill {
+        flex-grow: 10;
+        padding: 0;
+    }
+}
