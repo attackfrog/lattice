@@ -34,44 +34,44 @@
 
 html {
     font-family: $font-family;
-    font-size: $base-font-size;
+    font-size: $font-size-base;
     --font-scale: #{$font-scale-ratio-small};
 }
 
 // Headers increase in size exponentially according to the font scale
 h6 {
-    font-size: $base-font-size;
+    font-size: $font-size-base;
     margin: (0.7rem * $font-spacing-ratio) 0;
 }
 
 h5 {
-    font-size: calc(#{$base-font-size} * var(--font-scale));
+    font-size: calc(#{$font-size-base} * var(--font-scale));
     margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio) 0;
 }
 
 h4 {
-    font-size: calc(#{$base-font-size} * var(--font-scale) 
+    font-size: calc(#{$font-size-base} * var(--font-scale) 
         * var(--font-scale));
     margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
         * $font-spacing-ratio) 0;
 }
 
 h3 {
-    font-size: calc(#{$base-font-size} * var(--font-scale) 
+    font-size: calc(#{$font-size-base} * var(--font-scale) 
         * var(--font-scale) * var(--font-scale));
     margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
         * $font-spacing-ratio * $font-spacing-ratio) 0;
 }
 
 h2 {
-    font-size: calc(#{$base-font-size} * var(--font-scale) 
+    font-size: calc(#{$font-size-base} * var(--font-scale) 
         * var(--font-scale) * var(--font-scale) * var(--font-scale));
     margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
         * $font-spacing-ratio * $font-spacing-ratio * $font-spacing-ratio) 0;
 }
 
 h1 {
-    font-size: calc(#{$base-font-size} * var(--font-scale) 
+    font-size: calc(#{$font-size-base} * var(--font-scale) 
         * var(--font-scale) * var(--font-scale) * var(--font-scale) 
         * var(--font-scale));
     margin: (0.7rem * $font-spacing-ratio * $font-spacing-ratio 
@@ -89,15 +89,19 @@ h1 {
 
 // Standard element styling ---------------------------------------------------
 
+p {
+    line-height: $paragraph-line-height;
+}
+
 code {
-    padding: 0.2em 0.4em;
-    font-size: 0.85em;
+    padding: $code-padding;
+    font-size: $code-font-size;
     border-radius: $code-border-radius;
 }
 
 pre {
     @extend code;
-    padding: 0.7em;
+    padding: $pre-padding;
     max-width: 100%;
     overflow-x: auto;
 }
@@ -113,19 +117,31 @@ a:active {
     text-decoration: none;
 }
 
+ul {
+    padding: 0;
+    // handle right-to-left text, maybe
+    margin-inline-start: $list-indent;
+    margin-block-start: $list-indent;
+    margin-top: 0;
+
+    li {
+        margin: $list-item-spacing 0;
+    }
+}
+
 
 // Text styles      -----------------------------------------------------------
 
 .text-lead {            // this style is also colored in _color.scss
-    font-size: 1.5em;
+    font-size: $font-size-large;
 }
 
 .text-large {
-    font-size: 1.5em;
+    font-size: $font-size-large;
 }
 
 .text-small {
-    font-size: 0.75em;
+    font-size: $font-size-small;
 }
 
 .text-left {

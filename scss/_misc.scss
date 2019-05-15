@@ -11,3 +11,7 @@ html *::after {
 body {
     margin: 0;
 }
+
+hr {
+    @include hr(color-dim($hue-secondary));
+}

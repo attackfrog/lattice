@@ -3,7 +3,7 @@
 
 // Color functions  -----------------------------------------------------------
 
-// Color shades
+// Color shades     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @function color-light($hue) {
     @return hsl($hue, $saturation-light, $lightness-light);
@@ -30,7 +30,7 @@
 }
 
 
-// Greyscale shades
+// Greyscale shades - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @function color-grey-light() {
     @return hsl(0, 0, $lightness-light);
@@ -59,7 +59,7 @@
 
 // Component mixins -----------------------------------------------------------
 
-// Button
+// Button           - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @mixin button($size) {
     border: none;
@@ -89,7 +89,7 @@
     }
 }
 
-// Card
+// Card             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @mixin card() {
     width: fit-content;
@@ -111,7 +111,7 @@
     padding: $card-padding;
 }
 
-// Navbar
+// Navbar           - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @mixin navbar() {
     .container,
@@ -131,6 +131,7 @@
     li {
         height: $navbar-height;
         padding: 0 $navbar-item-spacing 0 0;
+        // vertically center content
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -147,7 +148,8 @@
         padding: 0;
     }
 
-    a:link {
+    a:link,
+    a:visited {
         font-weight: $navbar-link-font-weight;
         color: inherit;
         text-decoration: none;
@@ -174,4 +176,13 @@
     ul {
         flex-wrap: nowrap;
     }
+}
+
+// Miscellaneous    -----------------------------------------------------------
+
+@mixin hr($color) {
+    border: none;
+    margin: $hr-margin;
+    height: $hr-thickness;
+    background-color: transparentize($color, $hr-transparency);
 }

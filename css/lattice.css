@@ -12,8 +12,8 @@ code, pre {
 }
 
 pre {
-  background-color: #1b3032;
-  color: #f4f1f3;
+  background-color: #b3e1e6;
+  color: #321b2d;
 }
 
 a:link {
@@ -173,6 +173,10 @@ h1 {
     --font-scale: 1.333;
   }
 }
+p {
+  line-height: 150%;
+}
+
 code, pre {
   padding: 0.2em 0.4em;
   font-size: 0.85em;
@@ -194,6 +198,16 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin-inline-start: 2em;
+  margin-block-start: 2em;
+  margin-top: 0;
+}
+ul li {
+  margin: 0.3em 0;
 }
 
 .text-lead {
@@ -360,6 +374,13 @@ html *::after {
 
 body {
   margin: 0;
+}
+
+hr {
+  border: none;
+  margin: 2rem 0;
+  height: 1px;
+  background-color: rgba(115, 13, 93, 0.5);
 }
 
 button.button,
@@ -550,7 +571,8 @@ nav.navbar li.fill {
   flex-grow: 10;
   padding: 0;
 }
-nav.navbar a:link {
+nav.navbar a:link,
+nav.navbar a:visited {
   font-weight: normal;
   color: inherit;
   text-decoration: none;

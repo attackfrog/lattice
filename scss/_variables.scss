@@ -20,11 +20,23 @@ $breakpoint-large: 1200px;  // Desktop
 // Type Styling     -----------------------------------------------------------
 
 $font-family: 'PT Sans', sans-serif;
-$base-font-size: 16px;
+$font-size-base: 16px;
 $font-scale-ratio-large: 1.333; // for large screens (above medium breakpoint)
 $font-scale-ratio-small: 1.2;   // for small screens (below medium breakpoint)
 $font-spacing-ratio: 1.2;
+
+$paragraph-line-height: 150%;
+
+$code-font-size: 0.85em;
 $code-border-radius: $border-radius;
+$code-padding: 0.2em 0.4em;
+$pre-padding: 0.7em;
+
+$list-indent: 2em;
+$list-item-spacing: 0.3em;
+
+$font-size-large: 1.5em;
+$font-size-small: 0.75em;
 
 
 // Colors           -----------------------------------------------------------
@@ -90,3 +102,10 @@ $navbar-text-font-weight: bold;
 $navbar-link-font-weight: normal;
 $navbar-link-underline-thickness: 2px;
 $navbar-image-max-height: $navbar-height - 1rem;
+
+
+// Miscellaneous    -----------------------------------------------------------
+
+$hr-thickness: 1px;
+$hr-transparency: 0.5;
+$hr-margin: 2rem 0;
