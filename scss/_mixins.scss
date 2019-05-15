@@ -129,12 +129,49 @@
     }
 
     li {
-        padding: 1rem;
+        height: $navbar-height;
+        padding: 0 $navbar-item-spacing 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: $navbar-text-font-weight;
+    }
+
+    li:last-of-type {
+        padding-right: 0;
     }
 
     // special divider to right-justify items that follow it
     li.fill {
         flex-grow: 10;
         padding: 0;
+    }
+
+    a:link {
+        font-weight: $navbar-link-font-weight;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        box-shadow: 0 $navbar-link-underline-thickness;
+    }
+
+    img {
+        max-height: $navbar-image-max-height;
+    }
+}
+
+@mixin nav-align($align) {
+    ul {
+        justify-content: $align;
+    }
+}
+
+@mixin nav-nowrap() {
+    ul {
+        flex-wrap: nowrap;
     }
 }

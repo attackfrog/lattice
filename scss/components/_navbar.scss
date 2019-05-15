@@ -3,3 +3,15 @@
 nav.navbar {
     @include navbar();
 }
+
+nav.navbar.navbar-center {
+    @include nav-align(center);
+}
+
+nav.navbar.navbar-right {
+    @include nav-align(flex-end);
+}
+
+nav.navbar.navbar-nowrap {
+    @include nav-nowrap();
+}

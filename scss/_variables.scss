@@ -81,3 +81,12 @@ $card-heading-font-size: 1.2em;
 $card-heading-font-weight: bold;
 $card-heading-padding-bottom: 0.7rem;
 $card-heading-shadow: 0 1px rgba(128, 128, 128, 0.2);
+
+// Navbar
+
+$navbar-height: 3.5rem;
+$navbar-item-spacing: 2rem;
+$navbar-text-font-weight: bold;
+$navbar-link-font-weight: normal;
+$navbar-link-underline-thickness: 2px;
+$navbar-image-max-height: $navbar-height - 1rem;
