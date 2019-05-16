@@ -12,7 +12,7 @@ nav.navbar.navbar-right {
     @include nav-align(right);
 }
 
-nav.navbar li.fill {
+nav.navbar .fill {
     @include nav-fill();
 }
 

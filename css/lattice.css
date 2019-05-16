@@ -592,7 +592,7 @@ nav.navbar.navbar-right ul {
   justify-content: flex-end;
 }
 
-nav.navbar li.fill {
+nav.navbar .fill {
   flex-grow: 10;
   padding: 0;
 }
