@@ -12,7 +12,7 @@ code, pre {
 }
 
 pre {
-  background-color: #b3e1e6;
+  background-color: #f4f1f3;
   color: #321b2d;
 }
 
@@ -200,13 +200,15 @@ a:active {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   padding: 0;
   margin-inline-start: 2em;
   margin-block-start: 2em;
   margin-top: 0;
 }
-ul li {
+ul li,
+ol li {
   margin: 0.3em 0;
 }
 
@@ -250,8 +252,8 @@ ul li {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 2rem 2rem;
-  gap: 2rem 2rem;
+  grid-gap: 0 2rem;
+  gap: 0 2rem;
 }
 
 .gridbox-gapless {

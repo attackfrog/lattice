@@ -9,7 +9,7 @@ nav.navbar.navbar-center {
 }
 
 nav.navbar.navbar-right {
-    @include nav-align(flex-end);
+    @include nav-align(right);
 }
 
 nav.navbar.navbar-nowrap {

@@ -5,8 +5,8 @@ $border-radius: 3px;
 // Page Layout      -----------------------------------------------------------
 
 $grid-columns: 6;
-$grid-gap-cols: 2rem;           // gap between columns
-$grid-gap-rows: $grid-gap-cols; // gap between rows
+$grid-gap-cols: 2rem;   // gap between columns
+$grid-gap-rows: 0;      // gap between rows
 
 $container-width: 64rem;
 $container-padding: $grid-gap-cols;
@@ -74,9 +74,9 @@ $button-font-size: 1.1em;
 $button-interact-shading: 5%;
 
 $button-scale: 1;
-$button-small-scale: 0.8;
-$button-large-scale: 1.2;
-$button-huge-scale: 1.5;
+$button-scale-small: 0.8;
+$button-scale-large: 1.2;
+$button-scale-huge: 1.5;
 
 $button-hue-primary: $hue-primary;
 $button-hue-secondary: $hue-secondary;

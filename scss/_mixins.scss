@@ -107,7 +107,7 @@
     box-shadow: $card-heading-shadow;
 }
 
-@mixin card-body {
+@mixin card-body() {
     padding: $card-padding;
 }
 
@@ -167,6 +167,10 @@
 }
 
 @mixin nav-align($align) {
+    @if $align == right {
+        $align: flex-end;
+    }
+
     ul {
         justify-content: $align;
     }

@@ -117,7 +117,8 @@ a:active {
     text-decoration: none;
 }
 
-ul {
+ul,
+ol {
     padding: 0;
     // handle right-to-left text, maybe
     margin-inline-start: $list-indent;

@@ -7,17 +7,17 @@ a.button {
 
 button.button-small,
 a.button-small {
-    @include button($button-small-scale);
+    @include button($button-scale-small);
 }
 
 button.button-large,
 a.button-large {
-    @include button($button-large-scale);
+    @include button($button-scale-large);
 }
 
 button.button-huge,
 a.button-huge {
-    @include button($button-huge-scale);
+    @include button($button-scale-huge);
 }
 
 button.button-primary,
