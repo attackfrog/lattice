@@ -1,3 +1,10 @@
+/*
+    Lattice - A Simple CSS Framework
+    Written by Jack McLellan
+    <<< LATTICE WEBSITE GOES HERE >>>
+    https://github.com/attackfrog/lattice
+*/
+
 @import 'variables';
 @import 'variables-custom';
 @import 'mixins';
@@ -10,5 +17,6 @@
 @import 'components/button';
 @import 'components/card';
 @import 'components/container';
+@import 'components/hero';
 @import 'components/navbar';
 @import 'components/visibility';

@@ -1,3 +1,9 @@
+/*
+    Lattice - A Simple CSS Framework
+    Written by Jack McLellan
+    <<< LATTICE WEBSITE GOES HERE >>>
+    https://github.com/attackfrog/lattice
+*/
 html {
   color: #321b2d;
 }
@@ -544,6 +550,16 @@ a.button-clear:active {
 .container {
   max-width: 64rem;
   margin: auto;
+}
+
+.hero {
+  padding: 3rem;
+}
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
+  font-weight: normal;
+}
+.hero p {
+  font-size: 1.7em;
 }
 
 nav.navbar .container,

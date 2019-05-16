@@ -220,7 +220,7 @@ You can customize various navbar styling properties by adding these variables to
 * `$navbar-link-underline-thickness` - change the thickness of the on-hover underlining of navbar links
 * `$navbar-image-max-height` - change the maximum height of images in the navbar
 
-Alternatively you can write your own navbar style from scratch as a mixin called `navbar()`, in `_mixins-custom.scss`. If you do this, you'll also want to add a mixin called `nav-align($align)` that will take care of center- and right-justifying the navbar when passed `center` and `right`. If your navbar wraps for small screens, you may also want to write a mixin called `nav-nowrap()` that turns that behavior off. 
+Alternatively you can write your own navbar style from scratch as a mixin called `navbar()`, in `_mixins-custom.scss`. If you do this, you'll also want to add a mixin called `nav-align($align)` that will take care of center- and right-justifying the navbar when passed `center` and `right`. A `nav-fill()` mixin will be applied to the `.fill` class. If your navbar wraps for small screens, you may also want to write a mixin called `nav-nowrap()` that turns that behavior off. 
 
 -------------------------------------------------------------------------------
 

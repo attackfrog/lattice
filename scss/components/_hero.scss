@@ -1,0 +1,5 @@
+// An element whose content "pops" 
+
+.hero {
+    @include hero();
+}
