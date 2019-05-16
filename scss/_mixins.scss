@@ -142,12 +142,6 @@
         padding-right: 0;
     }
 
-    // special divider to right-justify items that follow it
-    li.fill {
-        flex-grow: 10;
-        padding: 0;
-    }
-
     a:link,
     a:visited {
         font-weight: $navbar-link-font-weight;
@@ -166,6 +160,7 @@
     }
 }
 
+// align all nav items (right or center)
 @mixin nav-align($align) {
     @if $align == right {
         $align: flex-end;
@@ -176,6 +171,13 @@
     }
 }
 
+// special divider to right-justify items that follow it
+@mixin nav-fill() {
+    flex-grow: 10;
+    padding: 0;
+}
+
+// don't wrap the navbar on small screen sizes
 @mixin nav-nowrap() {
     ul {
         flex-wrap: nowrap;

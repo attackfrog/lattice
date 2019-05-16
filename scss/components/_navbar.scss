@@ -12,6 +12,10 @@ nav.navbar.navbar-right {
     @include nav-align(right);
 }
 
+nav.navbar li.fill {
+    @include nav-fill();
+}
+
 nav.navbar.navbar-nowrap {
     @include nav-nowrap();
 }

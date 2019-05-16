@@ -569,10 +569,6 @@ nav.navbar li {
 nav.navbar li:last-of-type {
   padding-right: 0;
 }
-nav.navbar li.fill {
-  flex-grow: 10;
-  padding: 0;
-}
 nav.navbar a:link,
 nav.navbar a:visited {
   font-weight: normal;
@@ -594,6 +590,11 @@ nav.navbar.navbar-center ul {
 
 nav.navbar.navbar-right ul {
   justify-content: flex-end;
+}
+
+nav.navbar li.fill {
+  flex-grow: 10;
+  padding: 0;
 }
 
 nav.navbar.navbar-nowrap ul {
