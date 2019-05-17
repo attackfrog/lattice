@@ -3,3 +3,7 @@
 .hero {
     @include hero();
 }
+
+.hero.hero-transparent {
+    @include hero-transparent();
+}

@@ -108,6 +108,18 @@
 
     p {
         font-size: 1.7em;
+        --alpha-fg: 80%;
+        @include set-colors();
+    }
+}
+
+@mixin hero-transparent() {
+    --alpha-bg: 70%;
+    @include set-colors();
+
+    h1, h2, h3, h4, h5, h6, p {
+        --alpha-bg: 0%;
+        @include set-colors();
     }
 }
 

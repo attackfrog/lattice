@@ -401,6 +401,14 @@ ol li {
   font-style: italic;
 }
 
+.text-shadow-dark {
+  text-shadow: 2px 2px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, 90%);
+}
+
+.text-shadow-light {
+  text-shadow: 2px 2px 2px hsla(var(--hue-bg), var(--saturation-bg), 90%, 90%);
+}
+
 .gridbox, .gridbox-gapless {
   width: 100%;
   display: grid;
@@ -728,7 +736,7 @@ a.button-clear:active {
   width: 100%;
 }
 
-.container-full, .container {
+.container-full, .container-centered, .container {
   width: 100%;
   padding: 2rem;
 }
@@ -736,6 +744,13 @@ a.button-clear:active {
 .container {
   max-width: 64rem;
   margin: auto;
+}
+
+.container-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero {
@@ -746,10 +761,25 @@ a.button-clear:active {
 }
 .hero p {
   font-size: 1.7em;
+  --alpha-fg: 80%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+}
+
+.hero.hero-transparent {
+  --alpha-bg: 70%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+}
+.hero.hero-transparent h1, .hero.hero-transparent h2, .hero.hero-transparent h3, .hero.hero-transparent h4, .hero.hero-transparent h5, .hero.hero-transparent h6, .hero.hero-transparent p {
+  --alpha-bg: 0%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 nav.navbar .container,
-nav.navbar .container-full {
+nav.navbar .container-full,
+nav.navbar .container-centered {
   padding-top: 0;
   padding-bottom: 0;
 }

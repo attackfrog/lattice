@@ -10,3 +10,11 @@
     max-width: $container-width;
     margin: auto;
 }
+
+.container-centered {
+    @extend .container-full;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
