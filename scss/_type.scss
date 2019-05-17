@@ -170,11 +170,9 @@ ol {
 }
 
 .text-shadow-dark {
-    text-shadow: 2px 2px 2px hsla(var(--hue-bg), var(--saturation-bg), 
-        10%, 90%);
+    text-shadow: $text-shadow-dark;
 }
 
 .text-shadow-light {
-    text-shadow: 2px 2px 2px hsla(var(--hue-bg), var(--saturation-bg), 
-        90%, 90%);
+    text-shadow: $text-shadow-light;
 }

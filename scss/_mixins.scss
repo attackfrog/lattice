@@ -3,6 +3,7 @@
 
 // Color mixins     -----------------------------------------------------------
 
+// Set foreground color custom properties
 @mixin color-fg($hue, $shade) {
     --hue-fg: #{$hue};
     --saturation-fg: #{map-get($saturation, $shade)};
@@ -14,6 +15,7 @@
     --alpha-fg: #{$alpha};
 }
 
+// Set background color custom properties
 @mixin color-bg($hue, $shade) {
     --hue-bg: #{$hue};
     --saturation-bg: #{map-get($saturation, $shade)};
@@ -26,6 +28,7 @@
     --alpha-bg: #{$alpha};
 }
 
+// Set the element's color based on the values of those properties
 @mixin set-colors() {
     color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg),
         var(--alpha-fg));
@@ -100,21 +103,21 @@
 // Hero             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @mixin hero() {
-    padding: 3rem;
+    padding: $hero-padding;
 
     h1, h2, h3, h4, h5, h6 {
-        font-weight: normal;
+        font-weight: $hero-heading-font-weight;
     }
 
     p {
-        font-size: 1.7em;
-        --alpha-fg: 80%;
+        font-size: $hero-paragraph-font-size;
+        --alpha-fg: $hero-paragraph-alpha;
         @include set-colors();
     }
 }
 
 @mixin hero-transparent() {
-    --alpha-bg: 70%;
+    --alpha-bg: $hero-transparent-alpha;
     @include set-colors();
 
     h1, h2, h3, h4, h5, h6, p {

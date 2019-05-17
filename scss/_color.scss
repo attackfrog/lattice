@@ -1,9 +1,7 @@
 // Default color properties  --------------------------------------------------
 
 :root {
-    --hue-fg: #{$hue-secondary};
-    --saturation-fg: #{map-get($saturation, dark)};
-    --lightness-fg: #{map-get($lightness, dark)};
+    @include color-fg($hue-secondary, dark);
     --alpha-fg: #{$alpha-standard};
 
     --hue-bg: 0;
