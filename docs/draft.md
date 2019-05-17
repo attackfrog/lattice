@@ -107,7 +107,7 @@ Lattice uses a two-color complementary color scheme. By default the primary colo
 
 Customizing the colors in Lattice is easy. Change the default hues from turquoise/teal and pink by adding the variables `$hue-primary` and `$hue-secondary` to `_variables-custom.scss` with your own HSLA hue values (0-255). 
 
-You can also change the default saturation and lightness values for the various shades of each color. Add the custom variable maps `$saturation` and `$lightness` to `_variables-custom.scss` and insert values for `light`, `bright`, `dim`, `dark`, `offwhite`, `black`, `light-grey`, `bright-grey`, `dim-grey`, `dark-grey`, `offwhite-grey`, and `black-grey` into them. A template is included in `_variables-custom.scss` to make this process easier.
+You can also change the default saturation and lightness values for the various shades of each color. Add the [custom variable maps](https://sass-lang.com/documentation/values/maps) `$saturation` and `$lightness` to `_variables-custom.scss` and insert values for `light`, `bright`, `dim`, `dark`, `offwhite`, `black`, `light-grey`, `bright-grey`, `dim-grey`, `dark-grey`, `offwhite-grey`, and `black-grey` into them. A template is included in `_variables-custom.scss` to make this process easier.
 
 -------------------------------------------------------------------------------
 
