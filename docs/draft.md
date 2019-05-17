@@ -1,6 +1,6 @@
 # Lattice Documentation
 
-## Grid System [customize breakpoints]
+## Grid System
 
 Lattice uses a grid system based on CSS Grid. It has six columns by default, but this can be customized in the Sass files if desired. 
 
@@ -53,10 +53,12 @@ There are several classes you can use to style text:
 * `.text-right` - Aligns text to the right.
 * `.text-center` - Centers text.
 * `.text-justify` - Justifies text.
+* `.text-shadow-dark` - Applies a dark-colored shadow behind text.
+* `.text-shadow-light` - Applies a light-colored shadow behind text.
 
 In addition, `<code>` and `<pre>` elements have been styled to stand out more.
 
-### Customization [changed]
+### Customization
 
 Add the following to `_variables-custom.scss` to change their values:
 
@@ -73,6 +75,8 @@ Add the following to `_variables-custom.scss` to change their values:
 * `$list-item-spacing` - change the vertical spacing between list items
 * `$font-size-large` - change the font size of the `.text-lead` and `.text-large` classes
 * `$font-size-small` - change the font size of the `.text-small` class
+* `$text-shadow-dark` - change the styling of the shadow for the `.text-shadow-dark` class
+* `$text-shadow-light` - change the styling of the shadow for the `.text-shadow-light` class
 
 -------------------------------------------------------------------------------
 
@@ -103,7 +107,7 @@ Lattice uses a two-color complementary color scheme. By default the primary colo
 
 Customizing the colors in Lattice is easy. Change the default hues from turquoise/teal and pink by adding the variables `$hue-primary` and `$hue-secondary` to `_variables-custom.scss` with your own HSLA hue values (0-255). 
 
-You can also change the default saturation and lightness values for the various shades of each color. Add the custom variables `$saturation-*` and `$lightness-*` to `_variables-custom.scss`, replacing `*` with either `light`, `bright`, `dim`, `dark`, `offwhite`, or `black`.
+You can also change the default saturation and lightness values for the various shades of each color. Add the custom variable maps `$saturation` and `$lightness` to `_variables-custom.scss` and insert values for `light`, `bright`, `dim`, `dark`, `offwhite`, `black`, `light-grey`, `bright-grey`, `dim-grey`, `dark-grey`, `offwhite-grey`, and `black-grey` into them. A template is included in `_variables-custom.scss` to make this process easier.
 
 -------------------------------------------------------------------------------
 
@@ -138,7 +142,7 @@ You can also customize the sizes of the different button classes using a scaling
 
 Additionally, you can alter the colors of the button classes. `$button-hue-primary`, `$button-hue-secondary`, and `$button-hue-clear` all accept HSL hue values 0-255.
 
-If you'd prefer to write your own button styles from scratch, you can overwrite the mixins that define their properties. In `_mixins-custom.scss`, create a `button($size)` mixin that accepts the scaling factor to redefine the button's styling and/or create a `button-color($bgcolor, $textcolor)` mixin to redefine the button's coloring, including its coloring in the hover, focus, and active states. 
+If you'd prefer to write your own button styles from scratch, you can overwrite the mixins that define their properties. In `_mixins-custom.scss`, create a `button($size)` mixin that accepts the scaling factor to redefine the button's styling and/or create a `@mixin button-color($hue, $bgshade, $textshade)` mixin to redefine the button's coloring, including its coloring in the hover, focus, and active states. `$bgshade` and `$textshade` should accept the values `offwhite`, `light`, `bright`, `dim`, `dark`, `black`, and those same values with `-grey` appended to them (eg. `offwhite-grey`.)
 
 -------------------------------------------------------------------------------
 
@@ -180,11 +184,26 @@ If you'd prefer to write your own card styles from scratch, you can do so by add
 
 ### Container Component
 
-Containers are simple styles intended to be used as wrappers for page content. `.container-full` containers span the full width of the page and add some padding. `.container` containers also add some padding, but are restricted to a maximum width of 1024px.
+Containers are simple styles intended to be used as wrappers for page content. `.container-full` containers span the full width of the page and add some padding. `.container` containers also add some padding, but are restricted to a maximum width of 1024px. `.container-centered` containers span the full page width, but center any elements that are within them.
 
 #### Customization
 
 You can change the width of `.container` containers by adding the variable `$container-width` to `_variables-custom.scss`. You can also change the container padding with the `$container-padding` variable.
+
+-------------------------------------------------------------------------------
+
+### Hero Component
+
+A hero is a stylized container element, intended to be used for content that should stand out from the rest of the page. Text within the hero container is styled slightly differently than regular text. Hero elements combine well with the `.bgcolor-*` color classes, and can also be made semitransparent by adding the `.hero-transparent` class to them (to allow background images to show through, for example.)
+
+#### Customization
+
+Hero containers can be customized by adding the following variables to `_variables-custom.scss`:
+* `$hero-padding` - change the padding within the hero container
+* `$hero-heading-font-weight` - change the font weight of heading elements in the hero container
+* `$hero-paragraph-font-size` - change the font size of `<p>` elements in the hero container
+* `$hero-paragraph-alpha` - change the transparency of `<p>` elements in the hero container
+* `$hero-transparent-alpha` - change the transparency of the background of hero containers when the `.hero-transparent` class is applied
 
 -------------------------------------------------------------------------------
 
