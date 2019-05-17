@@ -1,33 +1,54 @@
-// Default text colors   ------------------------------------------------------
+// Default color properties  --------------------------------------------------
 
-html {
-    color: color-dark($hue-secondary);
+:root {
+    --hue-fg: #{$hue-secondary};
+    --saturation-fg: #{map-get($saturation, dark)};
+    --lightness-fg: #{map-get($lightness, dark)};
+    --alpha-fg: #{$alpha-standard};
+
+    --hue-bg: 0;
+    --saturation-bg: 0;
+    --lightness-bg: 100%;
+    --alpha-bg: 0%;
 }
 
+html {
+    @include set-colors();
+}
+
+
+// Default text colors   ------------------------------------------------------
+
 h1, h2, h3, h4, h5, h6 {
-    color: color-dim($hue-primary);
+    @include color-fg($hue-primary, dim);
+    @include set-colors();
 }
 
 code {
-    background-color: color-light($hue-secondary);
-    color: color-dark($hue-primary);
+    @include color-fg($hue-primary, dark);
+    @include color-bg($hue-secondary, light);
+    @include set-colors();
 }
 
 pre {
-    background-color: color-offwhite($hue-secondary);
-    color: color-dark($hue-secondary);
+    @include color-fg($hue-primary, dark);
+    @include color-bg($hue-secondary, offwhite);
+    @include set-colors();
 }
 
 a:link {
-    color: color-dim($hue-primary);
+    @include color-fg($hue-primary, dim);
+    @include set-colors();
 }
 
 a:visited {
-    color: color-dim($hue-secondary);
+    @include color-fg($hue-secondary, dim);
+    @include set-colors();
 }
 
 .text-lead {
-    color: color-dim($hue-secondary);
+    @include color-fg($hue-secondary, dim);
+    @include set-colors();
 }
 
 
@@ -36,56 +57,66 @@ a:visited {
 // Primary colors
 
 .bgcolor-primary-offwhite {
-    background-color: color-offwhite($hue-primary);
-    color: color-dark($hue-secondary);
+    @include color-fg($hue-secondary, dark);
+    @include color-bg($hue-primary, offwhite);
+    @include set-colors();
 }
 
 .bgcolor-primary-light {
-    background-color: color-light($hue-primary);
-    color: color-dark($hue-secondary);
+    @include color-fg($hue-secondary, dark);
+    @include color-bg($hue-primary, light);
+    @include set-colors();
 }
 
 .bgcolor-primary-bright {
-    background-color: color-bright($hue-primary);
-    color: color-dark($hue-secondary);
+    @include color-fg($hue-secondary, dark);
+    @include color-bg($hue-primary, bright);
+    @include set-colors();
 }
 
 .bgcolor-primary-dim {
-    background-color: color-dim($hue-primary);
-    color: color-offwhite($hue-secondary);
+    @include color-fg($hue-secondary, offwhite);
+    @include color-bg($hue-primary, dim);
+    @include set-colors();
 }
 
 .bgcolor-primary-dark {
-    background-color: color-dark($hue-primary);
-    color: color-offwhite($hue-secondary);
+    @include color-fg($hue-secondary, offwhite);
+    @include color-bg($hue-primary, dark);
+    @include set-colors();
 }
 
 
 // Secondary colors
 
 .bgcolor-secondary-offwhite {
-    background-color: color-offwhite($hue-secondary);
-    color: color-dark($hue-primary);
+    @include color-fg($hue-primary, dark);
+    @include color-bg($hue-secondary, offwhite);
+    @include set-colors();
 }
 
 .bgcolor-secondary-light {
-    background-color: color-light($hue-secondary);
-    color: color-dark($hue-primary);
+    @include color-fg($hue-primary, dark);
+    @include color-bg($hue-secondary, light);
+    @include set-colors();
 }
 
 .bgcolor-secondary-bright {
-    background-color: color-bright($hue-secondary);
-    color: color-dark($hue-primary);
+    @include color-fg($hue-primary, dark);
+    @include color-bg($hue-secondary, bright);
+    @include set-colors();
 }
 
 .bgcolor-secondary-dim {
-    background-color: color-dim($hue-secondary);
-    color: color-offwhite($hue-primary);
+    @include color-fg($hue-primary, offwhite);
+    @include color-bg($hue-secondary, dim);
+    @include set-colors();
 }
 
 .bgcolor-secondary-dark {
-    background-color: color-dark($hue-secondary);
-    color: color-offwhite($hue-primary);
+    @include color-fg($hue-primary, offwhite);
+    @include color-bg($hue-secondary, dark);
+    @include set-colors();
 }
 
 
@@ -93,30 +124,35 @@ a:visited {
 
 .bgcolor-grey-offwhite,
 .bgcolor-gray-offwhite {
-    background-color: color-grey-offwhite();
-    color: color-grey-dark();
+    @include color-fg(0, dark-grey);
+    @include color-bg(0, offwhite-grey);
+    @include set-colors();
 }
 
 .bgcolor-grey-light,
 .bgcolor-gray-light {
-    background-color: color-grey-light();
-    color: color-grey-dark();
+    @include color-fg(0, dark-grey);
+    @include color-bg(0, light-grey);
+    @include set-colors();
 }
 
 .bgcolor-grey-bright,
 .bgcolor-gray-bright {
-    background-color: color-grey-bright();
-    color: color-grey-black();
+    @include color-fg(0, black-grey);
+    @include color-bg(0, bright-grey);
+    @include set-colors();
 }
 
 .bgcolor-grey-dim,
 .bgcolor-gray-dim {
-    background-color: color-grey-dim();
-    color: color-grey-offwhite();
+    @include color-fg(0, offwhite-grey);
+    @include color-bg(0, dim-grey);
+    @include set-colors();
 }
 
 .bgcolor-grey-dark,
 .bgcolor-gray-dark {
-    background-color: color-grey-dark();
-    color: color-grey-offwhite();
+    @include color-fg(0, offwhite-grey);
+    @include color-bg(0, dark-grey);
+    @include set-colors();
 }

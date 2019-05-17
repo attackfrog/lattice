@@ -22,23 +22,22 @@ a.button-huge {
 
 button.button-primary,
 a.button-primary {
-    @include button-color(color-dim($button-hue-primary), color-offwhite($button-hue-primary));
+    @include button-color($hue-primary, dim, offwhite);
 }
 
 button.button-secondary,
 a.button-secondary {
-    @include button-color(color-dim($button-hue-secondary), color-offwhite($button-hue-secondary));
+    @include button-color($hue-secondary, dim, offwhite);
 }
 
 button.button-grey,
 button.button-gray,
 a.button-grey,
 a.button-gray {
-    @include button-color(color-grey-dim(), color-grey-offwhite());
+    @include button-color(0, dim-grey, offwhite-grey);
 }
 
 button.button-clear,
 a.button-clear {
-    @include button-color(rgba(0, 0, 0, 0), color-dark($button-hue-clear));
-    border: 1px solid transparentize(color-dark($button-hue-clear), 0.8);
+    @include button-color-transparent($hue-primary, offwhite, dim);
 }

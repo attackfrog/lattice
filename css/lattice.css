@@ -4,114 +4,261 @@
     <<< LATTICE WEBSITE GOES HERE >>>
     https://github.com/attackfrog/lattice
 */
+:root {
+  --hue-fg: 313;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --alpha-fg: 100%;
+  --hue-bg: 0;
+  --saturation-bg: 0;
+  --lightness-bg: 100%;
+  --alpha-bg: 0%;
+}
+
 html {
-  color: #321b2d;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #0d6a73;
+  --hue-fg: 185;
+  --saturation-fg: 80%;
+  --lightness-fg: 25%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 code, pre {
-  background-color: #e6b3da;
-  color: #1b3032;
+  --hue-fg: 185;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 313;
+  --saturation-bg: 50%;
+  --lightness-bg: 80%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 pre {
-  background-color: #f4f1f3;
-  color: #321b2d;
+  --hue-fg: 185;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 313;
+  --saturation-bg: 10%;
+  --lightness-bg: 95%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 a:link {
-  color: #0d6a73;
+  --hue-fg: 185;
+  --saturation-fg: 80%;
+  --lightness-fg: 25%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 a:visited {
-  color: #730d5d;
+  --hue-fg: 313;
+  --saturation-fg: 80%;
+  --lightness-fg: 25%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .text-lead {
-  color: #730d5d;
+  --hue-fg: 313;
+  --saturation-fg: 80%;
+  --lightness-fg: 25%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-primary-offwhite {
-  background-color: #f1f3f4;
-  color: #321b2d;
+  --hue-fg: 313;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 185;
+  --saturation-bg: 10%;
+  --lightness-bg: 95%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-primary-light {
-  background-color: #b3e1e6;
-  color: #321b2d;
+  --hue-fg: 313;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 185;
+  --saturation-bg: 50%;
+  --lightness-bg: 80%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-primary-bright {
-  background-color: #1ad5e6;
-  color: #321b2d;
+  --hue-fg: 313;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 185;
+  --saturation-bg: 70%;
+  --lightness-bg: 50%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-primary-dim {
-  background-color: #0d6a73;
-  color: #f4f1f3;
+  --hue-fg: 313;
+  --saturation-fg: 10%;
+  --lightness-fg: 95%;
+  --hue-bg: 185;
+  --saturation-bg: 80%;
+  --lightness-bg: 25%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-primary-dark {
-  background-color: #1b3032;
-  color: #f4f1f3;
+  --hue-fg: 313;
+  --saturation-fg: 10%;
+  --lightness-fg: 95%;
+  --hue-bg: 185;
+  --saturation-bg: 30%;
+  --lightness-bg: 15%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-secondary-offwhite {
-  background-color: #f4f1f3;
-  color: #1b3032;
+  --hue-fg: 185;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 313;
+  --saturation-bg: 10%;
+  --lightness-bg: 95%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-secondary-light {
-  background-color: #e6b3da;
-  color: #1b3032;
+  --hue-fg: 185;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 313;
+  --saturation-bg: 50%;
+  --lightness-bg: 80%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-secondary-bright {
-  background-color: #e61ab9;
-  color: #1b3032;
+  --hue-fg: 185;
+  --saturation-fg: 30%;
+  --lightness-fg: 15%;
+  --hue-bg: 313;
+  --saturation-bg: 70%;
+  --lightness-bg: 50%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-secondary-dim {
-  background-color: #730d5d;
-  color: #f1f3f4;
+  --hue-fg: 185;
+  --saturation-fg: 10%;
+  --lightness-fg: 95%;
+  --hue-bg: 313;
+  --saturation-bg: 80%;
+  --lightness-bg: 25%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-secondary-dark {
-  background-color: #321b2d;
-  color: #f1f3f4;
+  --hue-fg: 185;
+  --saturation-fg: 10%;
+  --lightness-fg: 95%;
+  --hue-bg: 313;
+  --saturation-bg: 30%;
+  --lightness-bg: 15%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-grey-offwhite,
 .bgcolor-gray-offwhite {
-  background-color: #f2f2f2;
-  color: #262626;
+  --hue-fg: 0;
+  --saturation-fg: 0%;
+  --lightness-fg: 15%;
+  --hue-bg: 0;
+  --saturation-bg: 0%;
+  --lightness-bg: 95%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-grey-light,
 .bgcolor-gray-light {
-  background-color: #cccccc;
-  color: #262626;
+  --hue-fg: 0;
+  --saturation-fg: 0%;
+  --lightness-fg: 15%;
+  --hue-bg: 0;
+  --saturation-bg: 0%;
+  --lightness-bg: 80%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-grey-bright,
 .bgcolor-gray-bright {
-  background-color: gray;
-  color: #0d0d0d;
+  --hue-fg: 0;
+  --saturation-fg: 0%;
+  --lightness-fg: 5%;
+  --hue-bg: 0;
+  --saturation-bg: 0%;
+  --lightness-bg: 50%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-grey-dim,
 .bgcolor-gray-dim {
-  background-color: #404040;
-  color: #f2f2f2;
+  --hue-fg: 0;
+  --saturation-fg: 0%;
+  --lightness-fg: 95%;
+  --hue-bg: 0;
+  --saturation-bg: 0%;
+  --lightness-bg: 25%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .bgcolor-grey-dark,
 .bgcolor-gray-dark {
-  background-color: #262626;
-  color: #f2f2f2;
+  --hue-fg: 0;
+  --saturation-fg: 0%;
+  --lightness-fg: 95%;
+  --hue-bg: 0;
+  --saturation-bg: 0%;
+  --lightness-bg: 15%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 @font-face {
@@ -388,7 +535,13 @@ hr {
   border: none;
   margin: 2rem 0;
   height: 1px;
-  background-color: rgba(115, 13, 93, 0.5);
+  --hue-bg: 313;
+  --saturation-bg: 80%;
+  --lightness-bg: 25%;
+  --alpha-bg: 100%;
+  --alpha-bg: 50%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 button.button,
@@ -449,43 +602,64 @@ a.button-huge:active {
 
 button.button-primary,
 a.button-primary {
-  background-color: #0d6a73;
-  color: #f1f3f4;
-  text-shadow: 1px 1px 2px #0e0c0b;
+  --hue-fg: 185;
+  --saturation-fg: 10%;
+  --lightness-fg: 95%;
+  --hue-bg: 185;
+  --saturation-bg: 80%;
+  --lightness-bg: 25%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
 }
 button.button-primary:hover, button.button-primary:focus,
 a.button-primary:hover,
 a.button-primary:focus {
-  background-color: #0a555c;
+  --lightness-bg: 20%;
 }
 button.button-primary:active,
 a.button-primary:active {
-  background-color: #0f808a;
+  --lightness-bg: 30%;
 }
 
 button.button-secondary,
 a.button-secondary {
-  background-color: #730d5d;
-  color: #f4f1f3;
-  text-shadow: 1px 1px 2px #0b0e0c;
+  --hue-fg: 313;
+  --saturation-fg: 10%;
+  --lightness-fg: 95%;
+  --hue-bg: 313;
+  --saturation-bg: 80%;
+  --lightness-bg: 25%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
 }
 button.button-secondary:hover, button.button-secondary:focus,
 a.button-secondary:hover,
 a.button-secondary:focus {
-  background-color: #5c0a4a;
+  --lightness-bg: 20%;
 }
 button.button-secondary:active,
 a.button-secondary:active {
-  background-color: #8a0f6f;
+  --lightness-bg: 30%;
 }
 
 button.button-grey,
 button.button-gray,
 a.button-grey,
 a.button-gray {
-  background-color: #404040;
-  color: #f2f2f2;
-  text-shadow: 1px 1px 2px #0d0d0d;
+  --hue-fg: 0;
+  --saturation-fg: 0%;
+  --lightness-fg: 95%;
+  --hue-bg: 0;
+  --saturation-bg: 0%;
+  --lightness-bg: 25%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
 }
 button.button-grey:hover, button.button-grey:focus,
 button.button-gray:hover,
@@ -494,30 +668,42 @@ a.button-grey:hover,
 a.button-grey:focus,
 a.button-gray:hover,
 a.button-gray:focus {
-  background-color: #333333;
+  --lightness-bg: 20%;
 }
 button.button-grey:active,
 button.button-gray:active,
 a.button-grey:active,
 a.button-gray:active {
-  background-color: #4d4d4d;
+  --lightness-bg: 30%;
 }
 
 button.button-clear,
 a.button-clear {
-  background-color: rgba(0, 0, 0, 0);
-  color: #321b2d;
-  text-shadow: 1px 1px 2px #cde4d2;
-  border: 1px solid rgba(50, 27, 45, 0.2);
+  --hue-fg: 185;
+  --saturation-fg: 80%;
+  --lightness-fg: 25%;
+  --hue-bg: 185;
+  --saturation-bg: 10%;
+  --lightness-bg: 95%;
+  --alpha-bg: 100%;
+  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
+  --hue-bg: 0;
+  --saturation-bg: 10%;
+  --lightness-bg: 95%;
+  --alpha-bg: 100%;
+  --alpha-bg: 0%;
+  border: 1px solid hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
 }
 button.button-clear:hover, button.button-clear:focus,
 a.button-clear:hover,
 a.button-clear:focus {
-  background-color: rgba(0, 0, 0, 0);
+  --lightness-bg: 90%;
 }
 button.button-clear:active,
 a.button-clear:active {
-  background-color: rgba(13, 13, 13, 0);
+  --lightness-bg: 100%;
 }
 
 .card {

@@ -44,23 +44,37 @@ $font-size-small: 0.75em;
 $hue-primary: 185;  // (Values 0-255 for hsl)
 $hue-secondary: $hue-primary + 128; // (the complement of the primary color)
 
-$saturation-light: 50%;
-$lightness-light: 80%;
+$saturation: (
+    offwhite: 10%,
+    light: 50%,
+    bright: 70%,
+    dim: 80%,
+    dark: 30%,
+    black: 50%,
+    offwhite-grey: 0%,
+    light-grey: 0%,
+    bright-grey: 0%,
+    dim-grey: 0%,
+    dark-grey: 0%,
+    black-grey: 0%,
+);
 
-$saturation-bright: 80%;
-$lightness-bright: 50%;
+$lightness: (
+    offwhite: 95%,
+    light: 80%,
+    bright: 50%,
+    dim: 25%,
+    dark: 15%,
+    black: 5%,
+    offwhite-grey: 95%,
+    light-grey: 80%,
+    bright-grey: 50%,
+    dim-grey: 25%,
+    dark-grey: 15%,
+    black-grey: 5%,
+);
 
-$saturation-dim: 80%;
-$lightness-dim: 25%;
-
-$saturation-dark: 30%;
-$lightness-dark: 15%;
-
-$saturation-offwhite: 10%;
-$lightness-offwhite: 95%;
-
-$saturation-black: 50%;
-$lightness-black: 5%;
+$alpha-standard: 100%;
 
 
 // Components       -----------------------------------------------------------
@@ -107,5 +121,5 @@ $navbar-image-max-height: $navbar-height - 1rem;
 // Miscellaneous    -----------------------------------------------------------
 
 $hr-thickness: 1px;
-$hr-transparency: 0.5;
+$hr-alpha: 50%;
 $hr-margin: 2rem 0;

@@ -1,59 +1,36 @@
 // Mixins and functions for all styles and structures
 
 
-// Color functions  -----------------------------------------------------------
+// Color mixins     -----------------------------------------------------------
 
-// Color shades     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-@function color-light($hue) {
-    @return hsl($hue, $saturation-light, $lightness-light);
+@mixin color-fg($hue, $shade) {
+    --hue-fg: #{$hue};
+    --saturation-fg: #{map-get($saturation, $shade)};
+    --lightness-fg: #{map-get($lightness, $shade)};
 }
 
-@function color-bright($hue) {
-    @return hsl($hue, $saturation-bright, $lightness-bright);
+@mixin color-fg-transparent($hue, $shade, $alpha) {
+    @include color-fg($hue, $shade);
+    --alpha-fg: #{$alpha};
 }
 
-@function color-dim($hue) {
-    @return hsl($hue, $saturation-dim, $lightness-dim);
+@mixin color-bg($hue, $shade) {
+    --hue-bg: #{$hue};
+    --saturation-bg: #{map-get($saturation, $shade)};
+    --lightness-bg: #{map-get($lightness, $shade)};
+    --alpha-bg: 100%;
 }
 
-@function color-dark($hue) {
-    @return hsl($hue, $saturation-dark, $lightness-dark);
+@mixin color-bg-transparent($hue, $shade, $alpha) {
+    @include color-bg($hue, $shade);
+    --alpha-bg: #{$alpha};
 }
 
-@function color-offwhite($hue) {
-    @return hsl($hue, $saturation-offwhite, $lightness-offwhite);
-}
-
-@function color-black($hue) {
-    @return hsl($hue, $saturation-black, $lightness-black);
-}
-
-
-// Greyscale shades - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-@function color-grey-light() {
-    @return hsl(0, 0, $lightness-light);
-}
-
-@function color-grey-bright() {
-    @return hsl(0, 0, $lightness-bright);
-}
-
-@function color-grey-dim() {
-    @return hsl(0, 0, $lightness-dim);
-}
-
-@function color-grey-dark() {
-    @return hsl(0, 0, $lightness-dark);
-}
-
-@function color-grey-offwhite() {
-    @return hsl(0, 0, $lightness-offwhite);
-}
-
-@function color-grey-black() {
-    @return hsl(0, 0, $lightness-black);
+@mixin set-colors() {
+    color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg),
+        var(--alpha-fg));
+    background-color: hsla(var(--hue-bg), var(--saturation-bg),
+        var(--lightness-bg), var(--alpha-bg));
 }
 
 
@@ -74,19 +51,28 @@
     }
 }
 
-@mixin button-color($bgcolor, $textcolor) {
-    background-color: $bgcolor;
-    color: $textcolor;    
-    text-shadow: 1px 1px 2px invert($textcolor);
+@mixin button-color($hue, $bgshade, $textshade) {
+    @include color-fg($hue, $textshade);
+    @include color-bg($hue, $bgshade);
+    @include set-colors();
+    text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg),
+        10%, var(--alpha-bg));
 
     &:hover,
     &:focus {
-        background-color: darken($bgcolor, $button-interact-shading);
+        --lightness-bg: #{map-get($lightness, $bgshade) - $button-interact-shading};
     }
 
     &:active {
-        background-color: lighten($bgcolor, $button-interact-shading);
+        --lightness-bg: #{map-get($lightness, $bgshade) + $button-interact-shading};
     }
+}
+
+@mixin button-color-transparent($hue, $bgshade, $textshade) {
+    @include button-color($hue, $bgshade, $textshade);
+    @include color-bg-transparent(0, $bgshade, 0%);
+    border: 1px solid hsla(var(--hue-fg), var(--saturation-fg), 
+        var(--lightness-fg), var(--alpha-fg));
 }
 
 // Card             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -200,9 +186,8 @@
 
 // Miscellaneous    -----------------------------------------------------------
 
-@mixin hr($color) {
+@mixin hr() {
     border: none;
     margin: $hr-margin;
     height: $hr-thickness;
-    background-color: transparentize($color, $hr-transparency);
 }
