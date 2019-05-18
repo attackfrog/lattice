@@ -765,13 +765,13 @@ a.button-clear:active {
 }
 .hero p {
   font-size: 1.7em;
-  --alpha-fg: $hero-paragraph-alpha;
+  --alpha-fg: 80%;
   color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
   background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
 .hero.hero-transparent {
-  --alpha-bg: $hero-transparent-alpha;
+  --alpha-bg: 70%;
   color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
   background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
