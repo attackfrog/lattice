@@ -1,7 +1,7 @@
 /*
     Lattice - A Simple CSS Framework
     Written by Jack McLellan
-    <<< LATTICE WEBSITE GOES HERE >>>
+    http://lattice.attackfrog.com
     https://github.com/attackfrog/lattice
 */
 :root {
@@ -10,7 +10,7 @@
   --lightness-fg: 15%;
   --alpha-fg: 100%;
   --hue-bg: 0;
-  --saturation-bg: 0;
+  --saturation-bg: 0%;
   --lightness-bg: 100%;
   --alpha-bg: 0%;
 }
@@ -399,6 +399,10 @@ ol li {
 
 .text-italic {
   font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
 
 .text-shadow-dark {

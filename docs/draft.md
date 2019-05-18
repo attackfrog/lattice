@@ -30,13 +30,25 @@ Values for larger screen sizes will overwrite ones for smaller sizes, so if you 
 
 If you just provide a width at larger screen sizes, the element will be full width by default at smaller screen sizes.
 
+```
+<div class="gridbox">
+    <div class="colspan-l-2 colspan-s-3"></div>
+    <div class="colspan-l-2 colspan-s-3"></div>
+    <div class="colspan-l-2 colspan-s-3"></div>
+    <div class="colspan-l-6 colspan-s-3"></div>
+</div>
+```
+...renders like the below (with .bgcolor-* styling added for visibility.) Try resizing your screen to see how it looks above and below the large breakpoint.
+
+--- Example ---
+
 ### Customization
 
 If you want a different number of columns than 6, add the variable `$grid-columns` to `_variables-custom.scss` with your desired value. 
 
 You can also customize the size of the gap between columns and rows with the `$grid-gap` variable.
 
-If you want to use different breakpoints than the default, you can customize them with `$breakpoint-small`, `$breakpoint-medium` and `$breakpoint-large`.
+If you want to use different breakpoints than the default, you can customize them with `$breakpoint-small`, `$breakpoint-medium` and `$breakpoint-large`. The default values are 640px, 960px, and 1200px respectively.
 
 -------------------------------------------------------------------------------
 
@@ -53,6 +65,9 @@ There are several classes you can use to style text:
 * `.text-right` - Aligns text to the right.
 * `.text-center` - Centers text.
 * `.text-justify` - Justifies text.
+* `.text-bold` - Bolds text.
+* `.text-italic` - Italicizes text.
+* `.text-underline` - Underlines text.
 * `.text-shadow-dark` - Applies a dark-colored shadow behind text.
 * `.text-shadow-light` - Applies a light-colored shadow behind text.
 
