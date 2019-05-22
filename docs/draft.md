@@ -209,7 +209,7 @@ You can change the width of `.container` containers by adding the variable `$con
 
 ### Hero Component
 
-A hero is a stylized container element, intended to be used for content that should stand out from the rest of the page. To use one, apply the `.hero` class to the relevant container. Text within the hero container is styled slightly differently than regular text. Hero elements combine well with the `.bgcolor-*` color classes, and can also be made semitransparent by adding the `.hero-transparent` class to them (to allow background images to show through, for example.)
+A hero is a stylized container element, intended to be used for content that should stand out from the rest of the page. To use one, apply the `.hero` class to the relevant container. Text within the hero container is styled slightly differently than regular text. Hero elements combine well with the `.bgcolor-*` color classes, and can also be made semitransparent by swapping `.hero` for `.hero-transparent`. (This allows background images to show through, for example.)
 
 #### Customization
 
@@ -218,7 +218,7 @@ Hero containers can be customized by adding the following variables to `_variabl
 * `$hero-heading-font-weight` - change the font weight of heading elements in the hero container
 * `$hero-paragraph-font-size` - change the font size of `<p>` elements in the hero container
 * `$hero-paragraph-alpha` - change the transparency of `<p>` elements in the hero container
-* `$hero-transparent-alpha` - change the transparency of the background of hero containers when the `.hero-transparent` class is applied
+* `$hero-transparent-alpha` - change the transparency of the background of `.hero-transparent` hero containers
 
 -------------------------------------------------------------------------------
 

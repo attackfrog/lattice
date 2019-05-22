@@ -4,6 +4,6 @@
     @include hero();
 }
 
-.hero.hero-transparent {
+.hero-transparent {
     @include hero-transparent();
 }

@@ -4,261 +4,153 @@
     http://lattice.attackfrog.com
     https://github.com/attackfrog/lattice
 */
-:root {
-  --hue-fg: 313;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --alpha-fg: 100%;
-  --hue-bg: 0;
-  --saturation-bg: 0%;
-  --lightness-bg: 100%;
-  --alpha-bg: 0%;
-}
-
 html {
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 
 h1, h2, h3, h4, h5, h6 {
-  --hue-fg: 185;
-  --saturation-fg: 80%;
-  --lightness-fg: 25%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 80%, 25%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 
 code, pre {
-  --hue-fg: 185;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 313;
-  --saturation-bg: 50%;
-  --lightness-bg: 80%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 50%, 80%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 pre {
-  --hue-fg: 185;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 313;
-  --saturation-bg: 10%;
-  --lightness-bg: 95%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 10%, 95%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 a:link {
-  --hue-fg: 185;
-  --saturation-fg: 80%;
-  --lightness-fg: 25%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 80%, 25%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 
 a:visited {
-  --hue-fg: 313;
-  --saturation-fg: 80%;
-  --lightness-fg: 25%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 80%, 25%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 
 .text-lead {
-  --hue-fg: 313;
-  --saturation-fg: 80%;
-  --lightness-fg: 25%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 80%, 25%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 
 .bgcolor-primary-offwhite {
-  --hue-fg: 313;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 185;
-  --saturation-bg: 10%;
-  --lightness-bg: 95%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 185, 10%, 95%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-primary-light {
-  --hue-fg: 313;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 185;
-  --saturation-bg: 50%;
-  --lightness-bg: 80%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 185, 50%, 80%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-primary-bright {
-  --hue-fg: 313;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 185;
-  --saturation-bg: 70%;
-  --lightness-bg: 50%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 185, 70%, 50%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-primary-dim {
-  --hue-fg: 313;
-  --saturation-fg: 10%;
-  --lightness-fg: 95%;
-  --hue-bg: 185;
-  --saturation-bg: 80%;
-  --lightness-bg: 25%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 10%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 185, 80%, 25%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-primary-dark {
-  --hue-fg: 313;
-  --saturation-fg: 10%;
-  --lightness-fg: 95%;
-  --hue-bg: 185;
-  --saturation-bg: 30%;
-  --lightness-bg: 15%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 313, 10%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 185, 30%, 15%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-secondary-offwhite {
-  --hue-fg: 185;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 313;
-  --saturation-bg: 10%;
-  --lightness-bg: 95%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 10%, 95%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-secondary-light {
-  --hue-fg: 185;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 313;
-  --saturation-bg: 50%;
-  --lightness-bg: 80%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 50%, 80%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-secondary-bright {
-  --hue-fg: 185;
-  --saturation-fg: 30%;
-  --lightness-fg: 15%;
-  --hue-bg: 313;
-  --saturation-bg: 70%;
-  --lightness-bg: 50%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 30%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 70%, 50%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-secondary-dim {
-  --hue-fg: 185;
-  --saturation-fg: 10%;
-  --lightness-fg: 95%;
-  --hue-bg: 313;
-  --saturation-bg: 80%;
-  --lightness-bg: 25%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 10%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 80%, 25%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-secondary-dark {
-  --hue-fg: 185;
-  --saturation-fg: 10%;
-  --lightness-fg: 95%;
-  --hue-bg: 313;
-  --saturation-bg: 30%;
-  --lightness-bg: 15%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 185, 10%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 30%, 15%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-grey-offwhite,
 .bgcolor-gray-offwhite {
-  --hue-fg: 0;
-  --saturation-fg: 0%;
-  --lightness-fg: 15%;
-  --hue-bg: 0;
-  --saturation-bg: 0%;
-  --lightness-bg: 95%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 0, 0%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 0, 0%, 95%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-grey-light,
 .bgcolor-gray-light {
-  --hue-fg: 0;
-  --saturation-fg: 0%;
-  --lightness-fg: 15%;
-  --hue-bg: 0;
-  --saturation-bg: 0%;
-  --lightness-bg: 80%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 0, 0%, 15%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 0, 0%, 80%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-grey-bright,
 .bgcolor-gray-bright {
-  --hue-fg: 0;
-  --saturation-fg: 0%;
-  --lightness-fg: 5%;
-  --hue-bg: 0;
-  --saturation-bg: 0%;
-  --lightness-bg: 50%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 0, 0%, 5%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 0, 0%, 50%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-grey-dim,
 .bgcolor-gray-dim {
-  --hue-fg: 0;
-  --saturation-fg: 0%;
-  --lightness-fg: 95%;
-  --hue-bg: 0;
-  --saturation-bg: 0%;
-  --lightness-bg: 25%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 0, 0%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 0, 0%, 25%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 .bgcolor-grey-dark,
 .bgcolor-gray-dark {
-  --hue-fg: 0;
-  --saturation-fg: 0%;
-  --lightness-fg: 95%;
-  --hue-bg: 0;
-  --saturation-bg: 0%;
-  --lightness-bg: 15%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-fg: 0, 0%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 0, 0%, 15%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 @font-face {
@@ -547,13 +439,9 @@ hr {
   border: none;
   margin: 2rem 0;
   height: 1px;
-  --hue-bg: 313;
-  --saturation-bg: 80%;
-  --lightness-bg: 25%;
-  --alpha-bg: 100%;
   --alpha-bg: 50%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  --color-bg: 313, 80%, 25%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 button.button,
@@ -614,64 +502,49 @@ a.button-huge:active {
 
 button.button-primary,
 a.button-primary {
-  --hue-fg: 185;
-  --saturation-fg: 10%;
-  --lightness-fg: 95%;
-  --hue-bg: 185;
-  --saturation-bg: 80%;
-  --lightness-bg: 25%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
-  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
+  --color-fg: 185, 10%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 185, 80%, 25%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
+  text-shadow: 1px 1px 2px rgba(26, 26, 26, 0.75);
 }
 button.button-primary:hover, button.button-primary:focus,
 a.button-primary:hover,
 a.button-primary:focus {
-  --lightness-bg: 20%;
+  filter: brightness(105%);
 }
 button.button-primary:active,
 a.button-primary:active {
-  --lightness-bg: 30%;
+  filter: brightness(95%);
 }
 
 button.button-secondary,
 a.button-secondary {
-  --hue-fg: 313;
-  --saturation-fg: 10%;
-  --lightness-fg: 95%;
-  --hue-bg: 313;
-  --saturation-bg: 80%;
-  --lightness-bg: 25%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
-  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
+  --color-fg: 313, 10%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 313, 80%, 25%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
+  text-shadow: 1px 1px 2px rgba(26, 26, 26, 0.75);
 }
 button.button-secondary:hover, button.button-secondary:focus,
 a.button-secondary:hover,
 a.button-secondary:focus {
-  --lightness-bg: 20%;
+  filter: brightness(105%);
 }
 button.button-secondary:active,
 a.button-secondary:active {
-  --lightness-bg: 30%;
+  filter: brightness(95%);
 }
 
 button.button-grey,
 button.button-gray,
 a.button-grey,
 a.button-gray {
-  --hue-fg: 0;
-  --saturation-fg: 0%;
-  --lightness-fg: 95%;
-  --hue-bg: 0;
-  --saturation-bg: 0%;
-  --lightness-bg: 25%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
-  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
+  --color-fg: 0, 0%, 95%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 0, 0%, 25%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
+  text-shadow: 1px 1px 2px rgba(26, 26, 26, 0.75);
 }
 button.button-grey:hover, button.button-grey:focus,
 button.button-gray:hover,
@@ -680,42 +553,35 @@ a.button-grey:hover,
 a.button-grey:focus,
 a.button-gray:hover,
 a.button-gray:focus {
-  --lightness-bg: 20%;
+  filter: brightness(105%);
 }
 button.button-grey:active,
 button.button-gray:active,
 a.button-grey:active,
 a.button-gray:active {
-  --lightness-bg: 30%;
+  filter: brightness(95%);
 }
 
 button.button-clear,
 a.button-clear {
-  --hue-fg: 185;
-  --saturation-fg: 80%;
-  --lightness-fg: 25%;
-  --hue-bg: 185;
-  --saturation-bg: 10%;
-  --lightness-bg: 95%;
-  --alpha-bg: 100%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
-  text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg), 10%, var(--alpha-bg));
-  --hue-bg: 0;
-  --saturation-bg: 10%;
-  --lightness-bg: 95%;
-  --alpha-bg: 100%;
+  --color-fg: 185, 80%, 25%;
+  color: hsla(var(--color-fg), var(--alpha-fg, 100%));
+  --color-bg: 185, 10%, 95%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
+  text-shadow: 1px 1px 2px rgba(26, 26, 26, 0.75);
   --alpha-bg: 0%;
-  border: 1px solid hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
+  --color-bg: 0, 10%, 95%;
+  background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
+  border: 1px solid hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 button.button-clear:hover, button.button-clear:focus,
 a.button-clear:hover,
 a.button-clear:focus {
-  --lightness-bg: 90%;
+  filter: brightness(105%);
 }
 button.button-clear:active,
 a.button-clear:active {
-  --lightness-bg: 100%;
+  filter: brightness(95%);
 }
 
 .card {
@@ -764,21 +630,20 @@ a.button-clear:active {
   font-weight: normal;
 }
 .hero p {
+  --alpha-fg: $hero-paragraph-alpha;
   font-size: 1.7em;
-  --alpha-fg: 80%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
 }
 
-.hero.hero-transparent {
+.hero-transparent {
   --alpha-bg: 70%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+  padding: 3rem;
 }
-.hero.hero-transparent h1, .hero.hero-transparent h2, .hero.hero-transparent h3, .hero.hero-transparent h4, .hero.hero-transparent h5, .hero.hero-transparent h6, .hero.hero-transparent p {
-  --alpha-bg: 0%;
-  color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg), var(--alpha-fg));
-  background-color: hsla(var(--hue-bg), var(--saturation-bg), var(--lightness-bg), var(--alpha-bg));
+.hero-transparent h1, .hero-transparent h2, .hero-transparent h3, .hero-transparent h4, .hero-transparent h5, .hero-transparent h6 {
+  font-weight: normal;
+}
+.hero-transparent p {
+  --alpha-fg: $hero-paragraph-alpha;
+  font-size: 1.7em;
 }
 
 nav.navbar .container,
@@ -797,10 +662,10 @@ nav.navbar ul {
 nav.navbar li {
   height: 3.5rem;
   padding: 0 2rem 0 0;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight: bold;
 }
 nav.navbar li:last-of-type {
   padding-right: 0;

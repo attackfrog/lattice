@@ -3,37 +3,26 @@
 
 // Color mixins     -----------------------------------------------------------
 
-// Set foreground color custom properties
+// Set foreground color
 @mixin color-fg($hue, $shade) {
-    --hue-fg: #{$hue};
-    --saturation-fg: #{map-get($saturation, $shade)};
-    --lightness-fg: #{map-get($lightness, $shade)};
+    --color-fg: #{$hue}, #{map-get($saturation, $shade)}, #{map-get($lightness, $shade)};
+    color: hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 
 @mixin color-fg-transparent($hue, $shade, $alpha) {
-    @include color-fg($hue, $shade);
     --alpha-fg: #{$alpha};
+    @include color-fg($hue, $shade);
 }
 
-// Set background color custom properties
+// Set background color
 @mixin color-bg($hue, $shade) {
-    --hue-bg: #{$hue};
-    --saturation-bg: #{map-get($saturation, $shade)};
-    --lightness-bg: #{map-get($lightness, $shade)};
-    --alpha-bg: 100%;
+    --color-bg: #{$hue}, #{map-get($saturation, $shade)}, #{map-get($lightness, $shade)};
+    background-color: hsla(var(--color-bg), var(--alpha-bg, 100%));
 }
 
 @mixin color-bg-transparent($hue, $shade, $alpha) {
-    @include color-bg($hue, $shade);
     --alpha-bg: #{$alpha};
-}
-
-// Set the element's color based on the values of those properties
-@mixin set-colors() {
-    color: hsla(var(--hue-fg), var(--saturation-fg), var(--lightness-fg),
-        var(--alpha-fg));
-    background-color: hsla(var(--hue-bg), var(--saturation-bg),
-        var(--lightness-bg), var(--alpha-bg));
+    @include color-bg($hue, $shade);
 }
 
 
@@ -57,25 +46,22 @@
 @mixin button-color($hue, $bgshade, $textshade) {
     @include color-fg($hue, $textshade);
     @include color-bg($hue, $bgshade);
-    @include set-colors();
-    text-shadow: 1px 1px 2px hsla(var(--hue-bg), var(--saturation-bg),
-        10%, var(--alpha-bg));
+    text-shadow: $button-text-shadow;
 
     &:hover,
     &:focus {
-        --lightness-bg: #{map-get($lightness, $bgshade) - $button-interact-shading};
+        filter: brightness(100% + $button-interact-shading);
     }
 
     &:active {
-        --lightness-bg: #{map-get($lightness, $bgshade) + $button-interact-shading};
+        filter: brightness(100% - $button-interact-shading);
     }
 }
 
 @mixin button-color-transparent($hue, $bgshade, $textshade) {
     @include button-color($hue, $bgshade, $textshade);
     @include color-bg-transparent(0, $bgshade, 0%);
-    border: 1px solid hsla(var(--hue-fg), var(--saturation-fg), 
-        var(--lightness-fg), var(--alpha-fg));
+    border: 1px solid hsla(var(--color-fg), var(--alpha-fg, 100%));
 }
 
 // Card             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -110,20 +96,14 @@
     }
 
     p {
+        --alpha-fg: $hero-paragraph-alpha;
         font-size: $hero-paragraph-font-size;
-        --alpha-fg: #{$hero-paragraph-alpha};
-        @include set-colors();
     }
 }
 
 @mixin hero-transparent() {
     --alpha-bg: #{$hero-transparent-alpha};
-    @include set-colors();
-
-    h1, h2, h3, h4, h5, h6, p {
-        --alpha-bg: 0%;
-        @include set-colors();
-    }
+    @include hero();
 }
 
 // Navbar           - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -146,11 +126,12 @@
     li {
         height: $navbar-height;
         padding: 0 $navbar-item-spacing 0 0;
+        font-weight: $navbar-text-font-weight;
+        
         // vertically center content
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-weight: $navbar-text-font-weight;
     }
 
     li:last-of-type {

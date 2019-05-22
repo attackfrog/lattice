@@ -15,5 +15,4 @@ body {
 hr {
     @include hr();
     @include color-bg-transparent($hue-secondary, dim, $hr-alpha);
-    @include set-colors();
 }
