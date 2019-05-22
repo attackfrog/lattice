@@ -12,4 +12,4 @@ http://lattice.attackfrog.com
 
 ## Customization
 
-Lattice is easy to customize. Change the values of variables by adding them to `_variables-custom.scss` or change class styling by adding the appropriate mixins to `_mixins-custom.scss`, then recompile with your favorite Sass compiler. Read the documentation at http://lattice.attackfrog.com for more details.
+Lattice is easy to customize. Change the values of variables by adding them to `_variables-custom.scss` or change class styling by adding the appropriate mixins to `_mixins-custom.scss`, then recompile `lattice.scss` with your favorite Sass compiler. Read the documentation at http://lattice.attackfrog.com for more details.
