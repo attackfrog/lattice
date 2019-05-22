@@ -46,7 +46,7 @@ If you just provide a width at larger screen sizes, the element will be full wid
 
 If you want a different number of columns than 6, add the variable `$grid-columns` to `_variables-custom.scss` with your desired value. 
 
-You can also customize the size of the gap between columns and rows with the `$grid-gap` variable.
+You can also customize the size of the gap between columns and rows with the `$grid-gap-cols` and `$grid-gap-rows` variables.
 
 If you want to use different breakpoints than the default, you can customize them with `$breakpoint-small`, `$breakpoint-medium` and `$breakpoint-large`. The default values are 640px, 960px, and 1200px respectively.
 
